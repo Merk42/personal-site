@@ -7,12 +7,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { WebsitesComponent } from './websites/websites.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { CgComponent } from './cg/cg.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WebsitesComponent,
-    SidenavComponent
+    SidenavComponent,
+    CgComponent
   ],
   imports: [
     BrowserModule,
