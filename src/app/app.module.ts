@@ -8,13 +8,21 @@ import { environment } from '../environments/environment';
 import { WebsitesComponent } from './websites/websites.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { CgComponent } from './cg/cg.component';
+import { ResumeComponent } from './resume/resume.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WebsitesComponent,
     SidenavComponent,
-    CgComponent
+    CgComponent,
+    ResumeComponent,
+    AboutComponent,
+    ContactComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
