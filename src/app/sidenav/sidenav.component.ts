@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter, Input  } from '@angular/core';
 export class SidenavComponent implements OnInit {
   @Output() chosencontent = new EventEmitter<any>();
   @Input() content: any;
+  // activeIndex: number;
   constructor() { }
   
   ngOnInit(): void {

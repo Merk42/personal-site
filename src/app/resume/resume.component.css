@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+#resume h1, #resume h2{
+	border-bottom:1px solid black;
+	text-transform:uppercase;
+	clear:left;
+}
+#resume h1{
+	font-size:2em;
+	margin-bottom:.25em;
+}
+#resume h2{
+	font-size:1em;
+}
+#resume header p{
+	margin:0 inherit .25em inherit;
+}
+dt{
+	font-style:italic;
+	clear:left;
+	height:1.2em;
+}
+dt, dd{
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	width:50%;
+	float:left;
+}
+dt, dd, .skillList{
+	font-size:.8em;
+}
+dd li{
+	font-weight:normal;
+}
+ul, li{
+	margin:0;
+	padding:0; /* need to change margin/padding for dots */
+}
+dd.workList{
+	width:100%;
+	float:none;
+	clear:both;
+}
+ul {
+
+	margin-bottom:1em;
+	padding-left:5%;
+}
+
+
+@media only screen and (max-width: 30em){
+	.longDate{
+		visibility:hidden;
+		width:.5em;
+		display:inline-block;
+		overflow:visible;
+	}
+	dt, dd, ul{
+		width:100%;
+		float:none;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+}
+@media print{
+	   .topNav, .sideNav, h1{
+	   display:none;
+   }
+   #externalContent h1{
+	   display:block;
+   }
+   #externalContent, #resume{
+	   max-width:none;
+   }
+   .content{
+	   width:auto;
+	   margin:0 1%;
+   }
+}

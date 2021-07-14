@@ -1,0 +1,9 @@
+.sideNav a{
+    border-right:5px solid black;
+}
+.sideNav .active{
+    border-width: 10px;
+}
+.sideNav .active~a{
+    border-width: 0;
+}
