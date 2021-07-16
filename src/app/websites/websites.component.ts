@@ -80,7 +80,6 @@ export class WebsitesComponent implements OnInit {
   }
 
   displayContent(event:any) {
-    console.log('displayContent', event);
     this.image = event.img ? 'https://www.markecurtis.com/images/' + event.img : '';
     this.copy = event.copy;
     this.heading = event.nav;

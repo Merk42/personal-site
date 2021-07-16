@@ -26,7 +26,6 @@ export class ProfileComponent implements OnInit {
   }
 
   displayContent(event:any) {
-    console.log('displayContent', event);
     this.heading = event.nav;
   }
 
