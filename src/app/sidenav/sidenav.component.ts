@@ -2,20 +2,20 @@ import { Component, OnInit, Output, EventEmitter, Input  } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.css']
+  templateUrl: './sidenav.component.html'
 })
 export class SidenavComponent implements OnInit {
   @Output() chosencontent = new EventEmitter<any>();
   @Input() content: any;
+  currentIndex: number;
   // activeIndex: number;
-  constructor() { }
+  constructor() {this.currentIndex = 0 }
   
   ngOnInit(): void {
   }
   pieceChosen(index:number) {
+    this.currentIndex = index;
     const VIEWCONTENT = this.content[index];
-    console.log('view', VIEWCONTENT)
     this.chosencontent.emit(VIEWCONTENT);
   }
 

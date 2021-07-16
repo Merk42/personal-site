@@ -1,5 +1,5 @@
 <nav class="sideNav">
-    <a *ngFor="let work of content; let i = index;" (click)="pieceChosen(i)">
+    <a *ngFor="let work of content; let i = index;" (click)="pieceChosen(i)" [ngClass]="{'active': i === currentIndex, 'prevActive' : i < currentIndex }">
         <span>{{work.nav}}</span>
     </a>
 </nav>
