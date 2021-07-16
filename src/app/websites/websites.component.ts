@@ -12,6 +12,10 @@ export class WebsitesComponent implements OnInit {
 
   content = [
     {
+      "nav":"About",
+      "copy":"Some of the many web pages I've worked on over the years."
+    },
+    {
       "nav":"Markecurtis",
       "img":"mec.png",
       "copy":"Surprise! I did this site, too. Responsive web design with a separate mobile style sheet."
@@ -72,12 +76,12 @@ export class WebsitesComponent implements OnInit {
   
 
   ngOnInit(): void {
-    
+    this.displayContent(this.content[0]);
   }
 
   displayContent(event:any) {
     console.log('displayContent', event);
-    this.image = 'https://www.markecurtis.com/images/' + event.img;
+    this.image = event.img ? 'https://www.markecurtis.com/images/' + event.img : '';
     this.copy = event.copy;
     this.heading = event.nav;
   }

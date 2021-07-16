@@ -22,6 +22,7 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.displayContent(this.content[0]);
   }
 
   displayContent(event:any) {

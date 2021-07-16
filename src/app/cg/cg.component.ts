@@ -12,6 +12,10 @@ export class CgComponent implements OnInit {
 
   content = [
     {
+      "nav":"About",
+      "copy":"In addition to web development, I also have a background in creating 3D models in 3ds Max."
+    },
+    {
       "nav":"Family Room",
       "img":"familyroom.jpg",
       "copy":"A room in my parents house. A demonstration for a prospective client that later helped with my current occupation."
@@ -51,11 +55,12 @@ export class CgComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.displayContent(this.content[0]);
   }
 
   displayContent(event:any) {
     console.log('displayContent', event);
-    this.image = 'https://www.markecurtis.com/images/' + event.img;
+    this.image = event.img ? 'https://www.markecurtis.com/images/' + event.img : '';
     this.copy = event.copy;
     this.heading = event.nav;
   }
