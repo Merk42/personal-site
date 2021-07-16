@@ -6,12 +6,19 @@
         <a class="back" style="visibility: visible;" (click)="toggleMenu()">menu</a>
         <a class="profile" href="https://plus.google.com/u/0/113147837962695686865?rel=author"><img src="https://www.markecurtis.com/images/logo.png" alt="logo"></a>
       </b>
+      <!--
       <a routerLink='/profile' id="about"><span>Profile</span></a>
       <a routerLink='/websites' id="past"><span>Websites</span></a>
+      -->
       <!--
       <a routerLink='/games' id="games"><span>Games</span></a>
       -->
+      <!--
       <a routerLink='/cg' id="cg"><span>3D</span></a>
+      -->
+      <a *ngFor="let nav of mainNav; let i = index" [routerLink]="nav.link" [id]="nav.id"  [ngClass]="{'active': i === currentIndex, 'prevActive' : i < currentIndex }">
+        <span>{{nav.name}}</span>
+      </a>
     </nav>
   </header>
   <router-outlet></router-outlet>
