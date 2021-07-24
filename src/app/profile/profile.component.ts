@@ -14,9 +14,6 @@ export class ProfileComponent implements OnInit {
     },
     {
       "nav":"Resume"
-    },
-    {
-      "nav":"Contact"
     }
   ]
   constructor() { }
