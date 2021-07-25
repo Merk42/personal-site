@@ -1,0 +1,127 @@
+[
+    {
+      "id":"about",
+      "link":"/profile",
+      "name":"Profile",
+      "examples":[
+        {
+          "nav":"About"
+        },
+        {
+          "nav":"Resume"
+        }
+      ]
+    },
+    {
+      "id":"past",
+      "link":"/websites",
+      "name":"Websites",
+      "examples":[
+        {
+          "nav":"About",
+          "copy":"Some of the many web pages I've worked on over the years."
+        },
+        {
+          "nav":"Markecurtis",
+          "img":"mec.png",
+          "copy":"Surprise! I did this site, too. Responsive web design with a separate mobile style sheet."
+        },
+        {
+          "nav":"Tarela People",
+          "img":"tarela-people.jpg",
+          "copy":"Webpage for Tarela People: Luxury Hospitality Headhunter."
+        },
+        {
+          "nav":"Jingle Ball",
+          "img":"z100-jingle-ball-2012.jpg",
+          "copy":"Webpage promoting the Z100's Jingle Ball concert in Madison Square Garden. A mobile version was also created for ~25% of total visitors."
+        },
+        {
+          "nav":"MonicaLauren Design",
+          "img":"monicalauren-design.jpg",
+          "copy":"Full website for the freelance graphic designer Monica Boeger."
+        },
+        {
+          "nav":"St. Mary's",
+          "img":"st-marys.jpg",
+          "copy":"Information page for St. Mary's charity. Complete with an interactive view of a proposed Activity Center as well as a way for visitors to create a playlist."
+        },
+        {
+          "nav":"Book Cafe",
+          "img":"book-cafe.jpg",
+          "copy":"Page where visitors with accounts can download assets for the six New York Clear Channel radio stations."
+        },
+        {
+          "nav":"Media Relations",
+          "img":"media-relations.jpg",
+          "copy":"Page where visitors with accounts can download assets for the six New York Clear Channel radio stations."
+        },
+        {
+          "nav":"Health Movement",
+          "img":"health-movement.jpg",
+          "copy":"Users were able to log their miles run/walk/biked and the total of all users was added to span the distance from New York to Los Angeles."
+        },
+        {
+          "nav":"Get Dropped NYC",
+          "img":"get-dropped-nyc.jpg",
+          "copy":"Contest page for Sun Drop details events and prizes visitors could win."
+        },
+        {
+          "nav":"Brookhaven 2030",
+          "img":"brookhaven2030.gif",
+          "copy":"Website for the massive 20 year planning of the town of Brookhaven. The first time I had done interactive elements like PHP forms, and LimeSurvey."
+        },
+        {
+          "nav":"V Baras",
+          "img":"vbaras.jpg",
+          "copy":"Reworked existing site to flash for a smoother, more visually appealing, experience."
+        }
+      ]
+    },
+    {
+      "id":"cg",
+      "link":"/cg",
+      "name":"3D",
+      "examples":[
+        {
+          "nav":"About",
+          "copy":"In addition to web development, I also have a background in creating 3D models in 3ds Max."
+        },
+        {
+          "nav":"Family Room",
+          "img":"familyroom.jpg",
+          "copy":"A room in my parents house. A demonstration for a prospective client that later helped with my current occupation."
+        },
+        {
+          "nav":"Ferry Terminal",
+          "img":"ferry.jpg",
+          "copy":"One of many views of a future ferry terminal and boat basin."
+        },
+        {
+          "nav":"Good Eats Kitchen",
+          "img":"gekitchen.jpg",
+          "copy":"Full website for the freelance graphic designer Monica Boeger."
+        },
+        {
+          "nav":"Living Room",
+          "img":"livingroom.jpg",
+          "copy":"Another residential interior. Many measurements and pictures were used in creating this piece."
+        },
+        {
+          "nav":"Building Exterior",
+          "img":"hobokenexterior.jpg",
+          "copy":"Work in progress of the exterior of a building in Hoboken. Also my first experiment with using Vray for textures and lighting."
+        },
+        {
+          "nav":"Tunnel",
+          "img":"tunnel.jpg",
+          "copy":"A proposed tunnel for a college. The client was worried that the tunnel would feel like a cave, though the rendering showed otherwise."
+        },
+        {
+          "nav":"Zork White House",
+          "img":"zorkexterior.jpg",
+          "copy":"You are West of a white house. There is a mailbox here."
+        }
+      ]
+    }
+  ]

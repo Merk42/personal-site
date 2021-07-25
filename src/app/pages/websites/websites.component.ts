@@ -9,7 +9,7 @@ export class WebsitesComponent implements OnInit {
   image = '';
   copy = '';
   heading = ''
-
+  chosenContent = {};
   content = [
     {
       "nav":"About",
@@ -83,6 +83,7 @@ export class WebsitesComponent implements OnInit {
     this.image = event.img ? 'https://www.markecurtis.com/images/' + event.img : '';
     this.copy = event.copy;
     this.heading = event.nav;
+    this.chosenContent = event;
   }
 
 }

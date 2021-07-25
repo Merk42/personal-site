@@ -5,13 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { WebsitesComponent } from './websites/websites.component';
+import { WebsitesComponent } from './pages/websites/websites.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { CgComponent } from './cg/cg.component';
+import { CgComponent } from './pages/cg/cg.component';
 import { ResumeComponent } from './resume/resume.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileComponent } from './profile/profile.component';
     ResumeComponent,
     AboutComponent,
     ContactComponent,
-    ProfileComponent
+    ProfileComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

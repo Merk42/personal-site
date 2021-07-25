@@ -9,7 +9,7 @@ export class CgComponent implements OnInit {
   image = '';
   copy = '';
   heading = ''
-
+  chosenContent = {};
   content = [
     {
       "nav":"About",
@@ -62,6 +62,7 @@ export class CgComponent implements OnInit {
     this.image = event.img ? 'https://www.markecurtis.com/images/' + event.img : '';
     this.copy = event.copy;
     this.heading = event.nav;
+    this.chosenContent = event;
   }
 
 }

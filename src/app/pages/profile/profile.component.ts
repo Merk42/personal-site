@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
+  chosenContent = {};
   heading = '';
   content = [
     {
@@ -24,6 +24,7 @@ export class ProfileComponent implements OnInit {
 
   displayContent(event:any) {
     this.heading = event.nav;
+    this.chosenContent = event;
   }
 
 }
