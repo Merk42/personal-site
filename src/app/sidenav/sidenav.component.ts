@@ -2,7 +2,8 @@ import { Component, OnInit, Output, EventEmitter, Input  } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html'
+  templateUrl: './sidenav.component.html',
+  styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
   @Output() chosencontent = new EventEmitter<any>();

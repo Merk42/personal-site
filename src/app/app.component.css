@@ -1,0 +1,116 @@
+body, html{
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+}
+#container{
+/*	max-width:1200px;*/
+/*	border:1px solid black;*/
+	margin:auto;
+max-width:60em;
+}
+a{
+text-decoration:none;
+}
+a:active{
+border-color:transparent;
+}
+a:link, a:hover, a:active, a:visited{
+color:#000;
+}
+nav span{
+display:inline-block;
+}
+nav a{
+display:block;
+}
+nav, nav a{
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+}
+.topNav{
+height:50px;
+font-size:1.2em;
+}
+    
+.topNav a{
+    background-image:url('https://www.markecurtis.com/images/icons.gif');
+    background-repeat:no-repeat;
+    background-position:left;
+
+}
+.svg .topNav a{
+    background-image:url('https://www.markecurtis.com/images/icons.svg');
+}
+#about{
+    background-position:0% 0;
+    
+    background-position:0 0;
+}
+#past{
+    background-position:0% 33.3%;
+    
+    background-position:0 -50px;
+}
+#games{
+    background-position:0% 66.6%;
+    
+    background-position:0 -100px;
+}
+#cg{
+    background-position:0% 100%;
+    
+    background-position:0 -150px;
+}
+.topNav a{
+    height:50px;
+    float:left;
+    line-height:50px;
+    
+    width:20%;
+    
+}
+.topNav span{
+    margin-left:50px;
+    }
+@media all and (min-width: 30em) and (max-width: 40em) {
+    .topNav a, .svg .topNav a{
+        background:none;
+    }
+    .topNav span{
+    margin-left:0;
+    }	
+}
+    
+    
+    
+.topNav .prevActive{
+    border-bottom:5px solid black;
+}
+.topNav .active{
+    border-bottom:10px solid black;
+    
+}
+.topNav b a{ /* logoholder */
+    width:20%;
+    float:left;
+    line-height:40px;
+    text-align:center;
+    background-image:none!important;
+}
+.topNav b a img{ /* logo */
+    max-width:100px;
+    max-height:50px;
+    vertical-align:middle;
+    width:100%;
+    height:auto;
+}
+nav a.back{
+	display:none;
+}
+@media only screen and (max-width:30em){
+    nav a.back {
+        display: block;
+    }
+}

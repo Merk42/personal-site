@@ -1,3 +1,31 @@
+nav a {
+    display: block;
+}
+.sideNav{
+    margin-top:0px;    
+}
+.sideNav{    
+    padding:0;
+    font-size:.8em;
+    min-height:1px;
+}
+.sideNav{
+    width:20%;
+    float:left;
+}
+.sideNav a{
+    padding:5px;
+    background-color:#EEE;
+}
+.sideNav .prevActive{
+    border-right:5px solid black;
+}
+.sideNav .active{
+    border-right:10px solid black;
+}
+    
+
+
 .sideNav a{
     border-right:5px solid black;
 }
@@ -7,3 +35,6 @@
 .sideNav .active~a{
     border-width: 0;
 }
+
+
+
