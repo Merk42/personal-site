@@ -1,12 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { WebsitesComponent } from './pages/websites/websites.component';
-import { CgComponent } from './pages/cg/cg.component';
+import { PageComponent } from './page/page.component';
 const routes: Routes = [
-  { path: 'profile', component: ProfileComponent },
-  { path: 'websites', component: WebsitesComponent },
-  { path: 'cg', component: CgComponent },
+  { path: ':section', component: PageComponent}
 ];
 
 @NgModule({

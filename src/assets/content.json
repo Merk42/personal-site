@@ -1,0 +1,256 @@
+[
+    {
+      "id":"about",
+      "link":"/profile",
+      "name":"Profile",
+      "examples":[
+        {
+          "nav":"About Me"
+        },
+        {
+          "nav":"Resume"
+        }
+      ]
+    },
+    {
+      "id": "ug",
+      "link": "/uncommon-goods",
+      "name": "Uncommon Goods",
+      "examples": [
+        {
+          "nav":"About",
+          "copy":"While most of my recent work has been at the same company, the various use cases, both internal and external, have provided a breadth of products"
+        },
+        {
+          "nav": "Style Guide",
+          "img": "styleguide.jpg",
+          "image": {
+            "width": 1425,
+            "height": 1000,
+            "formats": [
+              "styleguide.webp",
+              "styleguide.jpg"
+            ]
+          },
+          "copy": "At first CSS only, eventually evolving into an Angular and Vue component library. Standard UI paradigms to be used across products. Using these supported UX components reduced both Creative and Developer time"
+        },
+        {
+          "nav": "Wish List",
+          "img": "wishlist.jpg",
+          "image": {
+            "width": 1000,
+            "height": 860,
+            "formats": [
+              "wishlist.webp",
+              "wishlist.jpg"
+            ]
+          },
+          "copy": "Allowing users to save their favorite items for later purchasing, account for an increase in 5% of annual revenue"
+        },
+        {
+          "nav": "Checkout",
+          "img": "checkout.jpg",
+          "image": {
+            "width": 1380,
+            "height": 900,
+            "formats": [
+              "checkout.webp",
+              "checkout.jpg"
+            ]
+          },
+          "copy": "Built completely from the ground up in Angular, this has allowed for much faster iteration and newer features to market than would have been otherwise possible."
+        },
+        {
+          "nav": "Experiences",
+          "img": "experience.jpg",
+          "image": {
+            "width": 1200,
+            "height": 1000,
+            "formats": [
+              "experience.webp",
+              "experience.jpg"
+            ]
+          },
+          "copy": "'Experience' products, set for a time, and potentially place, creating the opportunity to sell non-physical products to users"
+        }
+      ]
+    },
+    {
+      "id":"past",
+      "link":"/websites",
+      "name":"Websites",
+      "examples":[
+        {
+          "nav":"About",
+          "copy":"Some of the many web pages I've worked on over the years."
+        },
+        {
+          "nav":"Markecurtis",
+          "img":"mec.png",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "mec.png"
+            ]
+          },
+          "copy":"Surprise! I did this site, too. Responsive web design with a separate mobile style sheet."
+        },
+        {
+          "nav":"Tarela People",
+          "img":"tarela-people.jpg",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "tarela-people.jpg"
+            ]
+          },
+          "copy":"Webpage for Tarela People: Luxury Hospitality Headhunter."
+        },
+        {
+          "nav":"Jingle Ball",
+          "img":"z100-jingle-ball-2012.jpg",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "z100-jingle-ball-2012.jpg"
+            ]
+          },
+          "copy":"Webpage promoting the Z100's Jingle Ball concert in Madison Square Garden. A mobile version was also created for ~25% of total visitors."
+        },
+        {
+          "nav":"MonicaLauren Design",
+          "img":"monicalauren-design.jpg",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "monicalauren-design.jpg"
+            ]
+          },
+          "copy":"Full website for the freelance graphic designer Monica Boeger."
+        },
+        {
+          "nav":"St. Mary's",
+          "img":"st-marys.jpg",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "st-marys.jpg"
+            ]
+          },
+          "copy":"Information page for St. Mary's charity. Complete with an interactive view of a proposed Activity Center as well as a way for visitors to create a playlist."
+        },
+        {
+          "nav":"Book Cafe",
+          "img":"book-cafe.jpg",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "book-cafe.jpg"
+            ]
+          },
+          "copy":"Page where visitors with accounts can download assets for the six New York Clear Channel radio stations."
+        },
+        {
+          "nav":"Media Relations",
+          "img":"media-relations.jpg",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "media-relations.jpg"
+            ]
+          },
+          "copy":"Page where visitors with accounts can download assets for the six New York Clear Channel radio stations."
+        },
+        {
+          "nav":"Health Movement",
+          "img":"health-movement.jpg",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "health-movement.jpg"
+            ]
+          },
+          "copy":"Users were able to log their miles run/walk/biked and the total of all users was added to span the distance from New York to Los Angeles."
+        },
+        {
+          "nav":"Get Dropped NYC",
+          "img":"get-dropped-nyc.jpg",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "get-dropped-nyc.jpg"
+            ]
+          },
+          "copy":"Contest page for Sun Drop details events and prizes visitors could win."
+        },
+        {
+          "nav":"Brookhaven 2030",
+          "img":"brookhaven2030.gif",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "brookhaven2030.gif"
+            ]
+          },
+          "copy":"Website for the massive 20 year planning of the town of Brookhaven. The first time I had done interactive elements like PHP forms, and LimeSurvey."
+        },
+        {
+          "nav":"V Baras",
+          "img":"vbaras.jpg",
+          "image": {
+            "width": 640,
+            "height": 480,
+            "formats": [
+              "vbaras.jpg"
+            ]
+          },
+          "copy":"Reworked existing site to flash for a smoother, more visually appealing, experience."
+        }
+      ]
+    },
+    {
+      "id": "pwa",
+      "link": "/pwa",
+      "name": "PWA",
+      "examples":[
+        {
+          "nav": "About",
+          "copy": "Small utility-based apps built from needs and desires in my own life"
+        },
+        {
+          "nav": "Marquee",
+          "img": "marquee.png",
+          "image": {
+            "width": 375,
+            "height": 812,
+            "formats": [
+              "marquee.png"
+            ]
+          },
+          "copy": "Built to check if a given message could be written given the letter cards provided. Will dynamically substitute characters when applicable (e.g a backwards '3' for 'E'). Also displays '*' if no character nor substitution could be found."
+        },
+        {
+          "nav": "Birthdays",
+          "img": "birthdays.png",
+          "image": {
+            "width": 375,
+            "height": 812,
+            "formats": [
+              "birthdays.png"
+            ]
+          },
+          "copy":"Managing friend's and family's birthdays, display upcoming age if known"
+        }
+      ]
+    }
+  ]

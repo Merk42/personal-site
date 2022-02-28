@@ -1,5 +1,11 @@
-<nav class="sideNav">
-    <a *ngFor="let work of content; let i = index;" (click)="pieceChosen(i)" [ngClass]="{'active': i === currentIndex, 'prevActive' : i < currentIndex }">
+<!--
+<button (click)="toggleSmNav">my work</button>
+-->
+<nav class="sideNav" [ngClass]="{'showWork': showMobileNav}">
+    <div id="btn-container">
+        <button (click)="toggleSmNav()">my work</button>
+    </div>
+    <a *ngFor="let work of examples; let i = index;" (click)="pieceChosen(i)" [ngClass]="{'active': i === currentIndex, 'prevActive' : i < currentIndex }">
         <span>{{work.nav}}</span>
     </a>
 </nav>

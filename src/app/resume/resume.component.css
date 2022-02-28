@@ -2,7 +2,7 @@
 /* CSS Document */
 
 #resume h1, #resume h2{
-	border-bottom:1px solid black;
+	border-bottom:1px solid var(--copy);
 	text-transform:uppercase;
 	clear:left;
 }
@@ -15,6 +15,7 @@
 }
 #resume header p{
 	margin:0 inherit .25em inherit;
+	text-transform:uppercase;
 }
 dt{
 	font-style:italic;
@@ -48,6 +49,44 @@ ul {
 	margin-bottom:1em;
 	padding-left:5%;
 }
+#resume p,
+#resume li{
+    font-size:1rem;
+    font-family:sans-serif;
+}
+#resume li{
+    margin-bottom:.25rem
+}
+#resume dt,
+#resume dd{
+    font-size:1.25rem;
+}
+#resume .worklist{
+   
+}
+#resume h2{
+    font-size:1.5rem;
+}
+#resume h3{
+    font-style: italic;
+}
+#resume .workSummary{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+#resume .workSummary p{
+	font-weight:bold;
+	font-family: serif;
+}
+
+#resume .workSummary p,
+#resume .workSummary h3{
+    margin:0;
+}
+#resume .workSummary h3+p,
+#resume .workSummary p+p+p{
+    text-align:right;
+}
 
 
 @media only screen and (max-width: 30em){
@@ -63,9 +102,21 @@ ul {
 		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
+	#resume .workSummary{
+		display:block;
+	}
+	#resume .workSummary h3+p,
+	#resume .workSummary p+p+p{
+		text-align:left;
+	}
 }
 @media print{
-	   .topNav, .sideNav, h1{
+	:root{
+		--copy:#000;
+		--menu:#EEE;
+		--bg:#FFF;
+	}
+	.topNav, .sideNav, h1{
 	   display:none;
    }
    #externalContent h1{

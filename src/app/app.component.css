@@ -1,47 +1,65 @@
+
 body, html{
 	margin:0;
 	padding:0;
 	font-family:sans-serif;
+    background-color: var(--bg);
 }
 #container{
 /*	max-width:1200px;*/
 /*	border:1px solid black;*/
 	margin:auto;
-max-width:60em;
+    max-width:60em;
 }
 a{
-text-decoration:none;
+    text-decoration:none;
 }
 a:active{
-border-color:transparent;
+    border-color:transparent;
 }
 a:link, a:hover, a:active, a:visited{
-color:#000;
+    color:var(--copy);
 }
 nav span{
-display:inline-block;
+    display:inline-block;
 }
 nav a{
-display:block;
+    display:block;
 }
 nav, nav a{
-box-sizing:border-box;
--webkit-box-sizing:border-box;
--moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
 }
 .topNav{
-height:50px;
-font-size:1.2em;
+    display: flex;
 }
-    
+.topNav, #logo{
+    height:50px;
+    font-size:1.2em;
+}
+#logo{
+    width: auto;
+} 
 .topNav a{
-    background-image:url('https://www.markecurtis.com/images/icons.gif');
     background-repeat:no-repeat;
     background-position:left;
-
+    white-space: nowrap;
+    height:50px;
+    line-height:50px;
+    flex-grow: 1;
+    padding: 0 1em;
 }
-.svg .topNav a{
-    background-image:url('https://www.markecurtis.com/images/icons.svg');
+.topNav span{
+    margin-left:calc(50px - 1em);
+}
+.topNav a{
+    background-image:url('https://www.markecurtis.com/images/icons-new.svg');
+}
+@media (prefers-color-scheme: dark) {
+    .topNav a{
+        background-image:url('https://www.markecurtis.com/images/icons-white.svg');
+    }
 }
 #about{
     background-position:0% 0;
@@ -53,64 +71,40 @@ font-size:1.2em;
     
     background-position:0 -50px;
 }
-#games{
+#ug{
     background-position:0% 66.6%;
     
     background-position:0 -100px;
 }
-#cg{
+#pwa{
     background-position:0% 100%;
     
     background-position:0 -150px;
 }
-.topNav a{
-    height:50px;
-    float:left;
-    line-height:50px;
-    
-    width:20%;
-    
-}
-.topNav span{
-    margin-left:50px;
-    }
-@media all and (min-width: 30em) and (max-width: 40em) {
+
+
+@media only screen and (min-width: 37.5em) and (max-width: 43.75em) {
     .topNav a, .svg .topNav a{
         background:none;
     }
     .topNav span{
-    margin-left:0;
+        margin-left:0;
     }	
 }
     
     
     
 .topNav .prevActive{
-    border-bottom:5px solid black;
+    border-bottom:5px solid var(--copy);
 }
 .topNav .active{
-    border-bottom:10px solid black;
+    border-bottom:10px solid var(--copy);
     
 }
-.topNav b a{ /* logoholder */
-    width:20%;
-    float:left;
-    line-height:40px;
-    text-align:center;
-    background-image:none!important;
-}
-.topNav b a img{ /* logo */
-    max-width:100px;
-    max-height:50px;
-    vertical-align:middle;
-    width:100%;
-    height:auto;
-}
-nav a.back{
-	display:none;
-}
-@media only screen and (max-width:30em){
-    nav a.back {
-        display: block;
+
+@media only screen and (max-width:37.5em){
+    .topNav span{
+        display: none;
     }
+    
 }

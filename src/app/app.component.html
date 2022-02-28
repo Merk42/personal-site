@@ -2,10 +2,7 @@
   <header>
 
     <nav class="topNav">
-      <b>
-        <a class="back" (click)="toggleMenu()">menu</a>
-        <a class="profile" href="https://plus.google.com/u/0/113147837962695686865?rel=author"><img src="https://www.markecurtis.com/images/logo.png" alt="logo"></a>
-      </b>
+      <img id="logo" src="https://www.markecurtis.com/images/logo.png" alt="logo" width="200" height="100">
       <!--
       <a routerLink='/profile' id="about"><span>Profile</span></a>
       <a routerLink='/websites' id="past"><span>Websites</span></a>
@@ -16,8 +13,8 @@
       <!--
       <a routerLink='/cg' id="cg"><span>3D</span></a>
       -->
-      <a *ngFor="let nav of mainNav; let i = index" [routerLink]="nav.link" [id]="nav.id"  [ngClass]="{'active': i === currentIndex, 'prevActive' : i < currentIndex }">
-        <span>{{nav.name}}</span>
+      <a [attr.aria-label]="nav.name"  *ngFor="let nav of mainNav; let i = index" [routerLink]="nav.link" [id]="nav.id"  [ngClass]="{'active': i === currentIndex, 'prevActive' : i < currentIndex }">
+        <span aria-hidden="true">{{nav.name}}</span>
       </a>
     </nav>
   </header>

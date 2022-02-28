@@ -1,5 +1,14 @@
-<div class="content">
+<div class="content" *ngIf="contentToDisplay">
     <h1>{{contentToDisplay.heading}}</h1>
-    <img *ngIf="contentToDisplay.image" [src]="contentToDisplay.image"/>
+    <picture *ngIf="contentToDisplay.image">
+        <source *ngFor="let format of contentToDisplay.image.formats" [srcset]="'https://www.markecurtis.com/images/' + format" [type]="'image/' + format.split('.')[1]">
+        <img
+            [src]="'https://www.markecurtis.com/images/' + contentToDisplay.image.formats[contentToDisplay.image.formats.length-1]"
+            [width]="contentToDisplay.image.width"
+            [height]="contentToDisplay.image.height"
+            [alt]="contentToDisplay.heading"/>
+    </picture>
     <p>{{contentToDisplay.copy}}</p>
+    <app-about *ngIf="contentToDisplay.heading ==  'About Me'"></app-about>
+    <app-resume *ngIf="contentToDisplay.heading == 'Resume'"></app-resume>
 </div>

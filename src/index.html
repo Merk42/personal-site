@@ -2,16 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>PersonalSite</title>
+  <title>Mark E Curtis</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#1976d2">
-  <!--
-  <link rel="stylesheet" href="https://www.markecurtis.com/css/default.css"/>
-  -->
-  <link rel="stylesheet" media="only screen and (max-width: 30em)" href="https://www.markecurtis.com/css/mobile.css"/>
+  <meta name="description" content="Personal Site of Mark E Curtis"/>
+  <style type="text/css">
+  :root{
+    --copy:#000;
+    --menu:#EEE;
+    --bg:#FFF;
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+        --copy:#FFF;
+        --menu:#444;
+        --bg:#222;
+    }
+}
+body{
+  background-color: var(--bg);
+  color:var(--copy);
+}
+</style>
 </head>
 <body>
   <app-root></app-root>
