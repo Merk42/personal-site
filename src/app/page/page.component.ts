@@ -6,9 +6,10 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 import { forkJoin } from 'rxjs';
 
 @Component({
-  selector: 'app-page',
-  templateUrl: './page.component.html',
-  styleUrls: ['./page.component.css']
+    selector: 'app-page',
+    templateUrl: './page.component.html',
+    styleUrls: ['./page.component.css'],
+    standalone: false
 })
 export class PageComponent implements OnInit {
   chosenContent: any = {
