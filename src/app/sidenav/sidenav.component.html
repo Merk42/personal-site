@@ -1,11 +1,10 @@
-<!--
-<button (click)="toggleSmNav">my work</button>
--->
-<nav class="sideNav" [ngClass]="{'showWork': showMobileNav}">
+<nav class="sideNav" [class.showWork]="showMobileNav">
     <div id="btn-container">
         <button (click)="toggleSmNav()">my work</button>
     </div>
-    <a *ngFor="let work of examples; let i = index;" (click)="pieceChosen(i)" [ngClass]="{'active': i === currentIndex, 'prevActive' : i < currentIndex }">
-        <span>{{work.nav}}</span>
-    </a>
+    @for (work of contentService.currentNav(); let i = $index; track work.nav) {
+        <a (click)="pieceChosen(i)" [class.active]="i === contentService.currentExampleIndex()">
+            <span>{{work.nav}}</span>
+        </a>
+    }
 </nav>

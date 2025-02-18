@@ -94,7 +94,7 @@ nav, nav a{
     
     
     
-.topNav .prevActive{
+.topNav a:has(~ .active){
     border-bottom:5px solid var(--copy);
 }
 .topNav .active{

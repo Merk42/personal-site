@@ -1,28 +1,22 @@
-import { Component, OnInit, Output, EventEmitter, Input  } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
+import { Example } from '../types';
+import { ContentService } from '../content.service';
+import { JsonPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-sidenav',
-    templateUrl: './sidenav.component.html',
-    styleUrls: ['./sidenav.component.css'],
-    standalone: false
+  selector: 'app-sidenav',
+  templateUrl: './sidenav.component.html',
+  styleUrls: ['./sidenav.component.css'],
+  imports: [JsonPipe]
 })
-export class SidenavComponent implements OnInit {
-  @Output() chosencontent = new EventEmitter<any>();
-  @Input() examples: any;
-  currentIndex: number;
+export class SidenavComponent {
+  contentService = inject(ContentService);
   showMobileNav = false;
-  // activeIndex: number;
-  constructor() {this.currentIndex = 0 }
-  
-  ngOnInit(): void {
-  }
+
   pieceChosen(index:number) {
-    this.currentIndex = index;
-    const VIEWCONTENT = this.examples[index];
-    console.log('view index', index);
-    console.log('of ', this.examples);
-    this.chosencontent.emit(VIEWCONTENT);
+    this.contentService.currentExampleIndex.set(index);
   }
+
   toggleSmNav() {
     this.showMobileNav = !this.showMobileNav;
   }

@@ -3,19 +3,15 @@
 
     <nav class="topNav">
       <img id="logo" src="https://www.markecurtis.com/images/logo.png" alt="logo" width="200" height="100">
-      <!--
-      <a routerLink='/profile' id="about"><span>Profile</span></a>
-      <a routerLink='/websites' id="past"><span>Websites</span></a>
-      -->
-      <!--
-      <a routerLink='/games' id="games"><span>Games</span></a>
-      -->
-      <!--
-      <a routerLink='/cg' id="cg"><span>3D</span></a>
-      -->
-      <a [attr.aria-label]="nav.name"  *ngFor="let nav of mainNav; let i = index" [routerLink]="nav.link" [id]="nav.id"  [ngClass]="{'active': i === currentIndex, 'prevActive' : i < currentIndex }">
-        <span aria-hidden="true">{{nav.name}}</span>
-      </a>
+      @for (nav of mainNav; let i = $index; track nav.name) {
+        <a
+          [attr.aria-label]="nav.name"
+          [routerLink]="nav.link"
+          [id]="nav.id"
+          [class.active]="i === currentIndex()">
+          <span aria-hidden="true">{{nav.name}}</span>
+        </a>
+      }
     </nav>
   </header>
   <router-outlet></router-outlet>

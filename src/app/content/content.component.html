@@ -1,14 +1,30 @@
-<div class="content" *ngIf="contentToDisplay">
-    <h1>{{contentToDisplay.heading}}</h1>
-    <picture *ngIf="contentToDisplay.image">
-        <source *ngFor="let format of contentToDisplay.image.formats" [srcset]="'https://www.markecurtis.com/images/' + format" [type]="'image/' + format.split('.')[1]">
-        <img
-            [src]="'https://www.markecurtis.com/images/' + contentToDisplay.image.formats[contentToDisplay.image.formats.length-1]"
-            [width]="contentToDisplay.image.width"
-            [height]="contentToDisplay.image.height"
-            [alt]="contentToDisplay.heading"/>
-    </picture>
-    <p>{{contentToDisplay.copy}}</p>
-    <app-about *ngIf="contentToDisplay.heading ==  'About Me'"></app-about>
-    <app-resume *ngIf="contentToDisplay.heading == 'Resume'"></app-resume>
+@if (this.contentService.currentWork()) {
+<div class="content">
+    <h1>{{this.contentService.currentWork().nav}}</h1>
+    @switch (this.contentService.currentWork().nav) {
+        @case ('About Me') {
+            <app-about />
+        }
+        @case ('Resume') {
+            <app-resume />
+        }
+        @default {
+            @if (this.contentService.currentWork().image) {
+                <picture>
+                    @for (source of images().source; track source.type) {
+                        <source
+                            [srcset]="source.srcset"
+                            [type]="source.type">
+                    }
+                    <img
+                        [src]="images().src"
+                        [width]="images().width"
+                        [height]="images().height"
+                        [alt]="images().alt"/>
+                </picture>
+            }
+        }
+      }   
+    <p>{{this.contentService.currentWork().copy}}</p>
 </div>
+}

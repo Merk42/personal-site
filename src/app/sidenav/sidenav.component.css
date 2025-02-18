@@ -22,23 +22,20 @@ nav a {
     border-width: 0;
     color:var(--copy)
 }
-    
-.sideNav .active,
-#btn-container{
-    
-    border-left-width:10px;
-    padding-left:5px;
-}
-.sideNav a,
-#btn-container{
-    
+.sideNav a:has(~ .active){
     border-left-width:5px;
     padding-left:10px;
 }
-.sideNav .active~a{
-    padding-left:15px;
-    border-left-width: 0;
+.sideNav .active,
+#btn-container{
+    border-left-width:10px;
+    padding-left:5px;
 }
+.sideNav a{
+    border-left-width: 0;
+    padding-left:15px;
+}
+
 #btn-container{
     display: none;
 }
