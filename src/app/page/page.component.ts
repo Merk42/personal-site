@@ -20,7 +20,6 @@ export class PageComponent implements OnInit {
     this.activatedRoute.params.pipe(
 			map(params => params.section)
 		).subscribe((res: string) => {
-      console.log('router event, page');
       this.contentService.currentPageName.set(res);
       this.contentService.currentExampleIndex.set(0);
     });

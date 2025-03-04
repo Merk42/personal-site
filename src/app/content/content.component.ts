@@ -1,8 +1,6 @@
-import { ChangeDetectionStrategy, Component, computed, effect, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { AboutComponent } from '../about/about.component';
 import { ResumeComponent } from '../resume/resume.component';
-import { Example } from '../types';
-import { JsonPipe } from '@angular/common';
 import { ContentService } from '../content.service';
 
 interface ImageExample {
@@ -20,7 +18,7 @@ interface ImageExample {
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
-  imports: [AboutComponent, ResumeComponent, JsonPipe],
+  imports: [AboutComponent, ResumeComponent],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContentComponent  {

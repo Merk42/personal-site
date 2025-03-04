@@ -1,13 +1,11 @@
-import { Component, inject, input, output } from '@angular/core';
-import { Example } from '../types';
+import { Component, inject } from '@angular/core';
 import { ContentService } from '../content.service';
-import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.css'],
-  imports: [JsonPipe]
+  imports: []
 })
 export class SidenavComponent {
   contentService = inject(ContentService);
