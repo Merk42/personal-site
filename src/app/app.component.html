@@ -2,7 +2,7 @@
   <header>
 
     <nav class="topNav">
-      <img id="logo" src="https://www.markecurtis.com/images/logo.png" alt="logo" width="200" height="100">
+      <app-logo/>
       @for (nav of mainNav; let i = $index; track nav.name) {
         <a
           [attr.aria-label]="nav.name"

@@ -26,5 +26,8 @@
         }
       }   
     <p>{{this.contentService.currentWork().copy}}</p>
+    @if (this.contentService.currentWork().cta) {
+        <p><a [href]="this.contentService.currentWork().cta?.link" target="_blank">{{this.contentService.currentWork().cta?.copy}}</a></p>
+    }
 </div>
 }

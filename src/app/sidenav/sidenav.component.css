@@ -45,13 +45,17 @@ nav a {
         float:none;
         width: 100%;
     }
+    /*
     .sideNav a {
         display:none;
     }
+    */
     .sideNav.showWork a {
         display: block;
     }
+    /*
     #btn-container {
         display: block;
     }
+    */
 }

@@ -7,6 +7,10 @@ export interface Example {
         height:number;
         formats:Array<string>;
         copy:string
+    },
+    cta?:{
+        link:string;
+        copy:string;
     }
 }
   

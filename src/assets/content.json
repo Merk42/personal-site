@@ -22,7 +22,7 @@
           "copy":"While most of my recent work has been at the same company, the various use cases, both internal and external, have provided a breadth of products"
         },
         {
-          "nav": "Style Guide",
+          "nav": "Component Library",
           "img": "styleguide.jpg",
           "image": {
             "width": 1425,
@@ -32,7 +32,11 @@
               "styleguide.jpg"
             ]
           },
-          "copy": "At first CSS only, eventually evolving into an Angular and Vue component library. Standard UI paradigms to be used across products. Using these supported UX components reduced both Creative and Developer time"
+          "copy": "At first CSS only, eventually evolving into an Angular and Vue component library. Standard UI paradigms to be used across products. Using these supported UX components reduced both Creative and Developer time",
+          "cta": {
+            "link":"http://markecurtis.com/vue-component-library",
+            "copy":"see the interactive Vue version"
+          }
         },
         {
           "nav": "Wish List",
