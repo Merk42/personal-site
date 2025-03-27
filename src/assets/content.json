@@ -256,5 +256,63 @@
           "copy":"Managing friend's and family's birthdays, display upcoming age if known"
         }
       ]
+    },
+    {
+      "id": "libraries",
+      "link": "/libraries",
+      "name": "Component Libraries",
+      "examples":[
+        {
+          "nav": "About",
+          "copy": "Component libraries built from a variety of frameworks"
+        },
+        {
+          "nav": "Angular",
+          "img": "angular-component-library.png",
+          "image": {
+            "width": 1055,
+            "height": 1055,
+            "formats": [
+              "angular-component-library.png"
+            ]
+          },
+          "copy": "Component Library built in Angular, utilized in the user-facing website of Uncommon Goods.",
+          "cta": {
+            "link":"http://www.uncommongoods.com/component-library",
+            "copy":"see the interactive Angular version"
+          }
+        },
+        {
+          "nav": "Vue",
+          "img": "vue-component-library.png",
+          "image": {
+            "width": 1055,
+            "height": 1055,
+            "formats": [
+              "vue-component-library.png"
+            ]
+          },
+          "copy": "Component Library built in Vue, utilized in the internal tools of Uncommon Goods.",
+          "cta": {
+            "link":"http://markecurtis.com/vue-component-library",
+            "copy":"see the interactive Vue version"
+          }
+        },        {
+          "nav": "React",
+          "img": "react-component-library.png",
+          "image": {
+            "width": 1055,
+            "height": 1055,
+            "formats": [
+              "react-component-library.png"
+            ]
+          },
+          "copy": "Component Library built in React, as a demonstration of abilities in React",
+          "cta": {
+            "link":"http://markecurtis.com/react-component-library",
+            "copy":"see the interactive React version"
+          }
+        }
+      ]
     }
   ]
