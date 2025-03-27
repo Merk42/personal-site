@@ -223,41 +223,6 @@
       ]
     },
     {
-      "id": "pwa",
-      "link": "/pwa",
-      "name": "PWA",
-      "examples":[
-        {
-          "nav": "About",
-          "copy": "Small utility-based apps built from needs and desires in my own life"
-        },
-        {
-          "nav": "Marquee",
-          "img": "marquee.png",
-          "image": {
-            "width": 375,
-            "height": 812,
-            "formats": [
-              "marquee.png"
-            ]
-          },
-          "copy": "Built to check if a given message could be written given the letter cards provided. Will dynamically substitute characters when applicable (e.g a backwards '3' for 'E'). Also displays '*' if no character nor substitution could be found."
-        },
-        {
-          "nav": "Birthdays",
-          "img": "birthdays.png",
-          "image": {
-            "width": 375,
-            "height": 812,
-            "formats": [
-              "birthdays.png"
-            ]
-          },
-          "copy":"Managing friend's and family's birthdays, display upcoming age if known"
-        }
-      ]
-    },
-    {
       "id": "libraries",
       "link": "/libraries",
       "name": "Component Libraries",
