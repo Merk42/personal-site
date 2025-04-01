@@ -1,2 +1,46 @@
+<!--
 <app-sidenav></app-sidenav>
 <app-content></app-content>
+-->
+<aside>
+    <nav class="sideNav">
+      @for (work of contentService.currentNav(); let i = $index; track work.nav) {
+        <a  routerLink="./" [fragment]="work.nav" [class.active]="false">
+            <span>{{work.nav}}</span>
+        </a>
+    }
+  </nav>
+  </aside>
+  <main>
+    @for (EX of demo().examples; track EX.nav;let idx = $index) {
+      <!--
+      https://prototyp.digital/blog/how-to-implement-intersection-observer-api-in-angular
+      -->
+      <section
+        [id]="EX.nav"
+        appObserveElement
+        (isIntersecting)="isIntersecting($event, idx)"
+        [isContinuous]="true">
+        <div>
+          <h2>{{EX.nav}}</h2>
+          @switch (EX.nav) {
+            @case ('About Me') {
+                <app-about />
+            }
+            @case ('Resume') {
+                <app-resume />
+            }
+            @default {
+              @if (EX.image) {
+                <img
+                  [src]="'https://www.markecurtis.com/images/' + EX.image.formats[0]"
+                  [width]="EX.image.width"
+                  [height]="EX.image.height"/>
+                }
+            }
+          }
+          <p>{{EX.copy}}</p>
+        </div>
+      </section>
+    }
+  </main>

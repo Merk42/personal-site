@@ -1,0 +1,72 @@
+:host {
+    display: grid;
+    grid-template-columns: 20ch auto;
+}
+
+html {
+    --navheight:50px
+}
+body, html {
+scroll-snap-type: proximity;
+scroll-snap-type: y mandatory;
+}
+
+header {
+position:sticky;
+top:0;
+height:var(--navheight);
+background-color: white;
+}
+/*
+section {
+  height: calc(100vh - var(--navheight));
+  padding-top:var(--navheight);
+}
+*/
+section div {
+  padding:1rem;
+  margin-inline: auto;
+  max-width: 62.5em;
+}
+/*
+main section {
+  scroll-snap-align: start;
+}
+*/
+main section:nth-child(even) {
+background-color: #DDD;
+}
+main section:nth-child(odd) {
+background-color: #BBB;
+}
+.sideNav {
+  position:fixed;
+}
+.sideNav a {
+  display: block;
+  border-left:5px solid black;
+  padding:5px 5px 5px 10px;
+  color:var(--copy);
+}
+.sideNav a.active {
+  border-left-width:10px;
+}
+@media screen and (max-width:30em) {
+    :host{
+      grid-template-columns: 1fr;
+    }
+    .sideNav a {
+      border-left-width:10px;
+      margin-bottom: 10px;
+      height: 10px;
+      padding:0px 0px 0px 10px;
+    }
+    .sideNav span{
+      visibility: hidden;
+    }
+  }
+
+  img {
+    height:auto;
+    max-width: 100%;
+  }

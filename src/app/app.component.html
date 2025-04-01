@@ -2,7 +2,11 @@
   <header>
 
     <nav class="topNav">
-      <app-logo/>
+      <a 
+        aria-label="home"
+        [routerLink]="'/'">
+        <app-logo/>
+      </a>
       @for (nav of mainNav; let i = $index; track nav.name) {
         <a
           [attr.aria-label]="nav.name"

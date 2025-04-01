@@ -1,27 +1,45 @@
-import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ChangeDetectionStrategy, Component, OnInit, computed, inject, signal } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ContentService } from '../content.service';
 import { map } from 'rxjs/operators';
 import { ContentComponent } from '../content/content.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
+import { JsonPipe } from '@angular/common';
+import { ObserveElementDirective } from '../intersection-observer.directive';
+import { AboutComponent } from '../about/about.component';
+import { ResumeComponent } from '../resume/resume.component';
 
 @Component({
   selector: 'app-page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css'],
-  imports: [ContentComponent, SidenavComponent],
+  imports: [AboutComponent, ContentComponent, ResumeComponent, RouterLink, SidenavComponent, JsonPipe, ObserveElementDirective],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageComponent implements OnInit {
-  private contentService = inject(ContentService);
+  contentService = inject(ContentService);
   private activatedRoute = inject(ActivatedRoute);
+
+  demo = computed(() => {
+    return this.contentService.currentPage()
+  })
+
+  highlighted = signal<number>(0)
 
   ngOnInit(): void {
     this.activatedRoute.params.pipe(
 			map(params => params.section)
 		).subscribe((res: string) => {
+      console.log('res?', res)
       this.contentService.currentPageName.set(res);
       this.contentService.currentExampleIndex.set(0);
     });
+  }
+
+  isIntersecting (status: boolean, index: number) {
+    console.log('Element #' + index + ' is intersecting ' + status)
+    if (status) {
+      this.highlighted.set(index-1)
+    }
   }
 }

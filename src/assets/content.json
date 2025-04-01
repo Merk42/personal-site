@@ -1,18 +1,5 @@
 [
     {
-      "id":"about",
-      "link":"/profile",
-      "name":"Profile",
-      "examples":[
-        {
-          "nav":"About Me"
-        },
-        {
-          "nav":"Resume"
-        }
-      ]
-    },
-    {
       "id": "ug",
       "link": "/uncommon-goods",
       "name": "Uncommon Goods",
