@@ -1,19 +1,17 @@
 import { ChangeDetectionStrategy, Component, OnInit, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { ContentService } from '../content.service';
 import { map } from 'rxjs/operators';
-import { ContentComponent } from '../content/content.component';
-import { SidenavComponent } from '../sidenav/sidenav.component';
-import { JsonPipe } from '@angular/common';
-import { ObserveElementDirective } from '../intersection-observer.directive';
+
 import { AboutComponent } from '../about/about.component';
+import { ContentService } from '../content.service';
+import { ObserveElementDirective } from '../intersection-observer.directive';
 import { ResumeComponent } from '../resume/resume.component';
 
 @Component({
   selector: 'app-page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css'],
-  imports: [AboutComponent, ContentComponent, ResumeComponent, RouterLink, SidenavComponent, JsonPipe, ObserveElementDirective],
+  imports: [AboutComponent, ObserveElementDirective, ResumeComponent, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageComponent implements OnInit {

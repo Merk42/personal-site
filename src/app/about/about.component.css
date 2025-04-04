@@ -3,3 +3,10 @@ div {
     margin-inline: auto;
     max-width: 62.5em;
 }
+.profiles {
+    display: flex;
+    list-style-type: none;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+}

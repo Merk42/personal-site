@@ -18,6 +18,9 @@ height:var(--navheight);
 background-color: white;
 }
 /*
+main section {
+  scroll-snap-align: start;
+}
 section {
   height: calc(100vh - var(--navheight));
   padding-top:var(--navheight);
@@ -28,11 +31,9 @@ section div {
   margin-inline: auto;
   max-width: 62.5em;
 }
-/*
-main section {
-  scroll-snap-align: start;
+h2{
+  padding-top:var(--navheight);
 }
-*/
 main section:nth-child(even) {
 background-color: #DDD;
 }
