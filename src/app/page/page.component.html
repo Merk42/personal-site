@@ -40,6 +40,15 @@
             }
           }
           <p>{{EX.copy}}</p>
+          @if (EX.ctas && EX.ctas.length) {
+            <ul class="example-links">
+              @for (link of EX.ctas; track link.link) {
+                <li>
+                  <a [href]="link.link" target="_blank">{{link.copy}}</a>
+                </li>
+              }
+            </ul>
+          }
         </div>
       </section>
     }

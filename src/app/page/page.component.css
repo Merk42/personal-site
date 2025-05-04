@@ -35,10 +35,10 @@ h2{
   padding-top:var(--navheight);
 }
 main section:nth-child(even) {
-background-color: #DDD;
+background-color: light-dark(#DDD, #333)
 }
 main section:nth-child(odd) {
-background-color: #BBB;
+background-color: light-dark(#BBB, #444);
 }
 .sideNav {
   position:fixed;
@@ -71,3 +71,13 @@ background-color: #BBB;
     height:auto;
     max-width: 100%;
   }
+
+
+.example-links a {
+    color:var(--copy);
+    font-weight: bold;
+}
+
+.example-links li+li {
+    margin-top: .75rem;
+}

@@ -76,7 +76,8 @@ nav, nav a{
 #ug{    
     background-position:0 -100px;
 }
-#pwa{    
+#pwa,
+#other{    
     background-position:0 -150px;
 }
 #libraries{    
@@ -85,8 +86,9 @@ nav, nav a{
 
 
 @media only screen and (min-width: 47.5em) and (max-width: 60em) {
-    .topNav a, .svg .topNav a{
-        background:none;
+    .topNav a,
+    .svg .topNav a{
+        background:none!important;
     }
     .topNav span{
         margin-left:0;

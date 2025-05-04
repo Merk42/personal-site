@@ -20,10 +20,10 @@
             ]
           },
           "copy": "At first CSS only, eventually evolving into an Angular and Vue component library. Standard UI paradigms to be used across products. Using these supported UX components reduced both Creative and Developer time",
-          "cta": {
+          "ctas": [{
             "link":"http://markecurtis.com/vue-component-library",
             "copy":"see the interactive Vue version"
-          }
+          }]
         },
         {
           "nav": "Wish List",
@@ -229,10 +229,10 @@
             ]
           },
           "copy": "Component Library built in Angular, utilized in the user-facing website of Uncommon Goods.",
-          "cta": {
+          "ctas": [{
             "link":"http://www.uncommongoods.com/component-library",
             "copy":"see the interactive Angular version"
-          }
+          }]
         },
         {
           "nav": "Vue",
@@ -245,10 +245,10 @@
             ]
           },
           "copy": "Component Library built in Vue, utilized in the internal tools of Uncommon Goods.",
-          "cta": {
+          "ctas": [{
             "link":"http://markecurtis.com/vue-component-library",
             "copy":"see the interactive Vue version"
-          }
+          }]
         },        {
           "nav": "React",
           "img": "react-component-library.png",
@@ -260,10 +260,65 @@
             ]
           },
           "copy": "Component Library built in React, as a demonstration of abilities in React",
-          "cta": {
+          "ctas": [{
             "link":"http://markecurtis.com/react-component-library",
             "copy":"see the interactive React version"
-          }
+          }]
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "link": "/other",
+      "name": "other",
+      "examples":[
+        {
+          "nav": "About",
+          "copy": "Games and tools made to either solve a small problem, or further my education in the field of web development. Sometimes both."
+        },
+        {
+          "nav": "Acronymph",
+          "img": "acronymph.png",
+          "image": {
+            "width": 1460,
+            "height": 560,
+            "formats": [
+              "acronymph.png"
+            ]
+          },
+          "copy": "Recreation of multiplayer acronym game. Utilizing NodeJS, Socket.io, React, and Tailwind. Allows for up to 20 players to compete in crafting acronyms from randomly generated array of letters.",
+          "ctas":[
+            {
+              "link":"https://markecurtis.com/acronymph",
+              "copy":"interactive version"
+            },
+            {
+              "link":"https://github.com/Merk42/acronymph",
+              "copy":"github"
+            }
+          ]
+        },
+        {
+          "nav": "Coffee Config",
+          "img": "coffee-config.png",
+          "image": {
+            "width": 900,
+            "height": 560,
+            "formats": [
+              "coffee-config.png"
+            ]
+          },
+          "copy": "Tool to assist in proper measurements of water and coffee when making pour over.",
+          "ctas":[
+            {
+              "link":"https://markecurtis.com/etc/coffee-config",
+              "copy":"interactive version"
+            },
+            {
+              "link":"https://github.com/Merk42/coffee-config",
+              "copy":"github"
+            }
+          ]
         }
       ]
     }

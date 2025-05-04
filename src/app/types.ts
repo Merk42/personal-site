@@ -8,10 +8,10 @@ export interface Example {
         formats:Array<string>;
         copy:string
     },
-    cta?:{
+    ctas?:[{
         link:string;
         copy:string;
-    }
+    }]
 }
   
 export interface Content {
