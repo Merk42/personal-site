@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map } from 'rxjs/operators';
@@ -15,6 +16,7 @@ import { ResumeComponent } from '../resume/resume.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageComponent implements OnInit {
+  viewportScroller = inject(ViewportScroller);
   contentService = inject(ContentService);
   private activatedRoute = inject(ActivatedRoute);
 
@@ -28,7 +30,7 @@ export class PageComponent implements OnInit {
     this.activatedRoute.params.pipe(
 			map(params => params.section)
 		).subscribe((res: string) => {
-      console.log('res?', res)
+      this.viewportScroller.scrollToPosition([0, 0]);
       this.contentService.currentPageName.set(res);
       this.contentService.currentExampleIndex.set(0);
     });
