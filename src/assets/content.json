@@ -289,7 +289,7 @@
           "copy": "Recreation of multiplayer acronym game. Utilizing NodeJS, Socket.io, React, and Tailwind. Allows for up to 20 players to compete in crafting acronyms from randomly generated array of letters.",
           "ctas":[
             {
-              "link":"https://markecurtis.com/acronymph",
+              "link":"https://acronymph.markecurtis.com",
               "copy":"interactive version"
             },
             {
