@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
-import { Content } from './types';
-import { Example } from './types';
+import { Content, Example } from './types';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 @Injectable({

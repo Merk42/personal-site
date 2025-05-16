@@ -12,7 +12,6 @@ import { LogoComponent } from './logo/logo.component';
 export class AppComponent {
   private contentService = inject(ContentService);
 
-  title = 'personal-site';
   mainNav: any[] = [];
   constructor() {
     this.contentService.getContent().subscribe((content: Array<any>)  => {
