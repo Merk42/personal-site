@@ -27,7 +27,7 @@ export class Page implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.pipe(
-			map(params => params.section)
+			map(params => params['section'])
 		).subscribe((res: string) => {
       this.viewportScroller.scrollToPosition([0, 0]);
       this.contentService.currentPageName.set(res);
