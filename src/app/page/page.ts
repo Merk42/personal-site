@@ -34,11 +34,4 @@ export class Page implements OnInit {
       this.contentService.currentExampleIndex.set(0);
     });
   }
-
-  isIntersecting (status: boolean, index: number) {
-    console.log('Element #' + index + ' is intersecting ' + status)
-    if (status) {
-      this.highlighted.set(index-1)
-    }
-  }
 }
