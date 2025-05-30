@@ -7,7 +7,7 @@
         [routerLink]="'/'">
         <app-logo/>
       </a>
-      @for (nav of mainNav; let i = $index; track nav.name) {
+      @for (nav of mainNav(); let i = $index; track nav.name) {
         <a
           [attr.aria-label]="nav.name"
           [routerLink]="nav.link"
