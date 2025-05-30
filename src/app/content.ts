@@ -17,7 +17,7 @@ export class Content {
 
 
   getContent() {
-    return this.http.get<Array<Page>>('/assets/content.json');
+    return this.http.get<Array<Page>>('content.json');
   }
 
   currentPage = computed<Page>(() => {
