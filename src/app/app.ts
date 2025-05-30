@@ -1,16 +1,16 @@
 import { Component, computed, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { ContentService } from './content.service';
-import { LogoComponent } from './logo/logo.component';
+import { Content } from './content';
+import { Logo } from './logo/logo';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  imports: [LogoComponent, RouterLink, RouterOutlet]
+  templateUrl: './app.html',
+  styleUrls: ['./app.css'],
+  imports: [Logo, RouterLink, RouterOutlet]
 })
-export class AppComponent {
-  private contentService = inject(ContentService);
+export class App {
+  private contentService = inject(Content);
 
   mainNav: any[] = [];
   constructor() {

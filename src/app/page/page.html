@@ -13,10 +13,7 @@
       https://prototyp.digital/blog/how-to-implement-intersection-observer-api-in-angular
       -->
       <section
-        [id]="EX.nav"
-        appObserveElement
-        (isIntersecting)="isIntersecting($event, idx)"
-        [isContinuous]="true">
+        [id]="EX.nav">
         <div>
           <h2>{{EX.nav}}</h2>
           @switch (EX.nav) {

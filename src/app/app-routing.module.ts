@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageComponent } from './page/page.component';
-import { AboutComponent } from './about/about.component';
+import { Page } from './page/page';
+import { About } from './about/about';
 const routes: Routes = [
-  { path: '', component: AboutComponent},
-  { path: ':section', component: PageComponent},
+  { path: '', component: About},
+  { path: ':section', component: Page},
 
 ];
 

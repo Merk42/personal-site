@@ -3,21 +3,20 @@ import { ChangeDetectionStrategy, Component, OnInit, computed, inject, signal } 
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map } from 'rxjs/operators';
 
-import { AboutComponent } from '../about/about.component';
-import { ContentService } from '../content.service';
-import { ObserveElementDirective } from '../intersection-observer.directive';
-import { ResumeComponent } from '../resume/resume.component';
+import { About } from '../about/about';
+import { Content } from '../content';
+import { Resume } from '../resume/resume';
 
 @Component({
   selector: 'app-page',
-  templateUrl: './page.component.html',
-  styleUrls: ['./page.component.css'],
-  imports: [AboutComponent, ObserveElementDirective, ResumeComponent, RouterLink],
+  templateUrl: './page.html',
+  styleUrls: ['./page.css'],
+  imports: [About, Resume, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PageComponent implements OnInit {
+export class Page implements OnInit {
   viewportScroller = inject(ViewportScroller);
-  contentService = inject(ContentService);
+  contentService = inject(Content);
   private activatedRoute = inject(ActivatedRoute);
 
   demo = computed(() => {

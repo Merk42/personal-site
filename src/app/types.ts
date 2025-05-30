@@ -14,7 +14,7 @@ export interface Example {
     }]
 }
   
-export interface Content {
+export interface Page {
     id:string;
     link:string;
     name:string;
