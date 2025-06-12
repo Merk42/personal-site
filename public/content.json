@@ -21,7 +21,7 @@
           },
           "copy": "At first CSS only, eventually evolving into an Angular and Vue component library. Standard UI paradigms to be used across products. Using these supported UX components reduced both Creative and Developer time",
           "ctas": [{
-            "link":"http://markecurtis.com/vue-component-library",
+            "link":"http://markecurtis.com/vue-component-library/index.html",
             "copy":"see the interactive Vue version"
           }]
         },
@@ -246,7 +246,7 @@
           },
           "copy": "Component Library built in Vue, utilized in the internal tools of Uncommon Goods.",
           "ctas": [{
-            "link":"http://markecurtis.com/vue-component-library",
+            "link":"http://markecurtis.com/vue-component-library/index.html",
             "copy":"see the interactive Vue version"
           }]
         },        {
@@ -261,7 +261,7 @@
           },
           "copy": "Component Library built in React, as a demonstration of abilities in React",
           "ctas": [{
-            "link":"http://markecurtis.com/react-component-library",
+            "link":"http://markecurtis.com/react-component-library/index.html",
             "copy":"see the interactive React version"
           }]
         }
