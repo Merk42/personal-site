@@ -6,12 +6,13 @@ import { map } from 'rxjs/operators';
 import { About } from '../about/about';
 import { Content } from '../content';
 import { Resume } from '../resume/resume';
-
+import { IntersectionObserverDirective } from '../intersection-observer';
+import { IntersectionStatus } from '../from-intersection-observer';
 @Component({
   selector: 'app-page',
   templateUrl: './page.html',
   styleUrls: ['./page.css'],
-  imports: [About, Resume, RouterLink],
+  imports: [About, Resume, RouterLink, IntersectionObserverDirective],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Page implements OnInit {
@@ -33,5 +34,12 @@ export class Page implements OnInit {
       this.contentService.currentPageName.set(res);
       this.contentService.currentExampleIndex.set(0);
     });
+  }
+
+  onVisibilityChanged(index: number, status: IntersectionStatus) {
+    console.log(index, status);
+    if (status === 'Visible') {
+      this.highlighted.set(index)
+    }
   }
 }

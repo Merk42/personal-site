@@ -1,7 +1,7 @@
 <aside>
     <nav class="sideNav">
       @for (work of contentService.currentNav(); let i = $index; track work.nav) {
-        <a  routerLink="./" [fragment]="work.nav" [class.active]="false">
+        <a  routerLink="./" [fragment]="work.nav" [class.active]="$index === highlighted()">
             <span>{{work.nav}}</span>
         </a>
     }
@@ -15,7 +15,7 @@
       <section
         [id]="EX.nav">
         <div>
-          <h2>{{EX.nav}}</h2>
+          <h2  intersectionObserver [intersectionDebounce]="0" (visibilityChange)="onVisibilityChanged($index, $event)">{{EX.nav}}</h2>
           @switch (EX.nav) {
             @case ('About Me') {
                 <app-about />

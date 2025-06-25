@@ -17,7 +17,7 @@ top:0;
 height:var(--navheight);
 background-color: white;
 }
-/*
+
 main section {
   scroll-snap-align: start;
 }
@@ -25,11 +25,11 @@ section {
   height: calc(100vh - var(--navheight));
   padding-top:var(--navheight);
 }
-*/
+
 section div {
   padding:1rem;
   margin-inline: auto;
-  max-width: 62.5em;
+  height: calc(100vh - var(--navheight) - 1rem - 1rem);
 }
 h2{
   padding-top:var(--navheight);
@@ -53,31 +53,40 @@ background-color: light-dark(#BBB, #444);
   border-left-width:10px;
 }
 @media screen and (max-width:30em) {
-    :host{
-      grid-template-columns: 1fr;
-    }
-    .sideNav a {
-      border-left-width:10px;
-      margin-bottom: 10px;
-      height: 10px;
-      padding:0px 0px 0px 10px;
-    }
-    .sideNav span{
-      visibility: hidden;
-    }
+  :host{
+    grid-template-columns: 1fr;
   }
+  .sideNav a {
+    border-left-width:10px;
+    margin-bottom: 10px;
+    height: 10px;
+    padding:0px 0px 0px 10px;
+  }
+  .sideNav a.active {
+    border-left-width:20px;
+  }
+  .sideNav span{
+    visibility: hidden;
+  }
+}
 
-  img {
-    height:auto;
-    max-width: 100%;
-  }
+img {
+  height:auto;
+  max-width: 100%;
+
+  
+  min-width: 0;
+  flex-shrink: 1;
+  min-height: 0;
+  width: auto;
+}
 
 
 .example-links a {
-    color:var(--copy);
-    font-weight: bold;
+  color:var(--copy);
+  font-weight: bold;
 }
 
 .example-links li+li {
-    margin-top: .75rem;
+  margin-top: .75rem;
 }
