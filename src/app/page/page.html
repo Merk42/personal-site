@@ -11,7 +11,7 @@
     @for (EX of demo().examples; track EX.nav;let idx = $index) {
       <section
         [id]="EX.nav">
-        <div>
+        <div class="pageContent">
           <h2  intersectionObserver [intersectionDebounce]="0" (visibilityChange)="onVisibilityChanged($index, $event)">{{EX.nav}}</h2>
           @switch (EX.nav) {
             @case ('About Me') {

@@ -31,14 +31,11 @@ section div {
   margin-inline: auto;
   height: calc(100vh - var(--navheight) - 1rem - 1rem);
 }
-h2{
-  padding-top:var(--navheight);
-}
 main section:nth-child(even) {
-background-color: light-dark(#DDD, #333)
+  background-color: light-dark(#DDD, #333)
 }
 main section:nth-child(odd) {
-background-color: light-dark(#BBB, #444);
+  background-color: light-dark(#BBB, #444);
 }
 .sideNav {
   position:fixed;
@@ -78,7 +75,6 @@ img {
   min-width: 0;
   flex-shrink: 1;
   min-height: 0;
-  width: auto;
 }
 
 
@@ -89,4 +85,9 @@ img {
 
 .example-links li+li {
   margin-top: .75rem;
+}
+
+.pageContent {
+  display:flex;
+  flex-flow: column nowrap;
 }
