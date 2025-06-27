@@ -24,8 +24,6 @@ export class Page implements OnInit {
     return this.contentService.currentPage()
   })
 
-  highlighted = signal<number>(0)
-
   ngOnInit(): void {
     this.activatedRoute.params.pipe(
 			map(params => params['section'])
@@ -39,7 +37,7 @@ export class Page implements OnInit {
   onVisibilityChanged(index: number, status: IntersectionStatus) {
     console.log(index, status);
     if (status === 'Visible') {
-      this.highlighted.set(index)
+      this.contentService.currentExampleIndex.set(index)
     }
   }
 }

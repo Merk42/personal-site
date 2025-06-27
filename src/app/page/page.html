@@ -1,7 +1,7 @@
 <aside>
     <nav class="sideNav">
       @for (work of contentService.currentNav(); let i = $index; track work.nav) {
-        <a  routerLink="./" [fragment]="work.nav" [class.active]="$index === highlighted()">
+        <a  routerLink="./" [fragment]="work.nav" [class.active]="$index === contentService.currentExampleIndex()">
             <span>{{work.nav}}</span>
         </a>
     }
@@ -9,9 +9,6 @@
   </aside>
   <main>
     @for (EX of demo().examples; track EX.nav;let idx = $index) {
-      <!--
-      https://prototyp.digital/blog/how-to-implement-intersection-observer-api-in-angular
-      -->
       <section
         [id]="EX.nav">
         <div>
