@@ -75,6 +75,8 @@ img {
   min-width: 0;
   flex-shrink: 1;
   min-height: 0;
+  object-fit: scale-down;
+  object-position: left;
 }
 
 
