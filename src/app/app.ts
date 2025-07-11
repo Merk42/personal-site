@@ -17,7 +17,11 @@ export class App {
   })
 
   currentIndex = computed(() => {
-    return this.contentService.allContent()?.findIndex(c => c.link === '/' + this.contentService.currentPageName())
+    const INDEX = this.contentService.allContent()?.findIndex(c => c.link === '/' + this.contentService.currentPageName())
+    if (typeof INDEX === 'undefined') {
+      return -1
+    }
+    return INDEX
   })
 
 }

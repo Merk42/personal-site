@@ -1,8 +1,9 @@
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { DebugElement, provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { provideZonelessChangeDetection } from '@angular/core';
-import { About } from './about';
-import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
+import { About } from './about';
 
 describe('About', () => {
   let component: About;
@@ -12,7 +13,10 @@ describe('About', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [About],
-      providers: [provideZonelessChangeDetection()]
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideZonelessChangeDetection()]
     }).compileComponents();
 
     fixture = TestBed.createComponent(About);
