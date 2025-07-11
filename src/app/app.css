@@ -56,16 +56,10 @@ nav, nav a{
     line-height:50px;
     flex-grow: 1;
     padding: 0 1em;
-    background-image:url('https://www.markecurtis.com/images/icons-new.svg');
+    background-image: var(--icons);
 }
 .topNav span{
     margin-left:calc(50px - 1em);
-}
-
-@media (prefers-color-scheme: dark) {
-    .topNav a:not(:nth-child(1)){
-        background-image:url('https://www.markecurtis.com/images/icons-white.svg');
-    }
 }
 #about{    
     background-position:0 0;
@@ -110,4 +104,20 @@ nav, nav a{
         display: none;
     }
     
+}
+
+.color-picker {
+    position:fixed;
+    bottom:0;
+    left:0;
+}
+.color-picker fieldset {
+    display: flex;
+    gap: .5rem;
+    padding: .25rem;
+    width: 20CH;
+    box-sizing: border-box;
+    background-color: var(--menu);
+    margin: 0;
+    border: none;
 }
