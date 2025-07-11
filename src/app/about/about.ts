@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
-
+import { Component, effect, inject } from '@angular/core';
+import { Content } from '../content';
 @Component({
     selector: 'app-about',
     templateUrl: './about.html',
     styleUrls: ['./about.css']
 })
-export class About  {
+export class About {
+    contentService = inject(Content);
+    constructor() {
+    effect(() => {   
+      this.contentService.currentPageName.set('');
+    })
+  }
 }
