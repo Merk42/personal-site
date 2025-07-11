@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Page } from './types';
+import { shareReplay } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,9 @@ export class Content {
 
 
   getContent() {
-    return this.http.get<Array<Page>>('content.json');
+    return this.http.get<Array<Page>>('content.json').pipe(
+      shareReplay(1)
+    );
   }
 
   currentPage = computed<Page>(() => {
