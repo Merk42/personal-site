@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, computed, inject, signal } from '@angular/core';
+import { Injectable, computed, inject, resource, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Page } from './types';
 import { shareReplay } from 'rxjs';
@@ -14,7 +14,16 @@ export class Content {
   currentPageName = signal('');
   currentExampleIndex = signal(0);
 
-  allContent = toSignal(this.getContent())
+ allContent = resource({
+    loader: () => {
+      return fetch('content.json').then(
+        (res) => res.json() as Promise<Array<Page>>
+      );
+    },
+  });
+
+
+  // allContent = toSignal(this.getContent())
 
 
   getContent() {
@@ -24,8 +33,8 @@ export class Content {
   }
 
   currentPage = computed<Page>(() => {
-    if (this.allContent() && this.allContent()?.length) {
-      const PAGE = this.allContent()?.find( page => page.link === '/' + this.currentPageName());
+    if (typeof this.allContent.value() !== 'undefined') {
+      const PAGE = this.allContent.value()?.find( (page:Page) => page.link === '/' + this.currentPageName());
       if (PAGE) {
         return PAGE
       }

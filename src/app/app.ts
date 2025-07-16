@@ -13,11 +13,11 @@ export class App {
   private contentService = inject(Content);
 
   mainNav = computed(() => {
-    return this.contentService.allContent()
+    return this.contentService.allContent.value()
   })
 
   currentIndex = computed(() => {
-    const INDEX = this.contentService.allContent()?.findIndex(c => c.link === '/' + this.contentService.currentPageName())
+    const INDEX = this.contentService.allContent.value()?.findIndex(c => c.link === '/' + this.contentService.currentPageName())
     if (typeof INDEX === 'undefined') {
       return -1
     }
