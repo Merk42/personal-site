@@ -324,8 +324,8 @@
           "nav": "Sploosh Kaboom",
           "img": "sploosh-kaboom.png",
           "image": {
-            "width": 1210,
-            "height": 960,
+            "width": 1180,
+            "height": 820,
             "formats": [
               "sploosh-kaboom.png"
             ]
