@@ -302,8 +302,8 @@
           "nav": "Coffee Config",
           "img": "coffee-config.png",
           "image": {
-            "width": 900,
-            "height": 560,
+            "width": 800,
+            "height": 650,
             "formats": [
               "coffee-config.png"
             ]
@@ -316,6 +316,28 @@
             },
             {
               "link":"https://github.com/Merk42/coffee-config",
+              "copy":"github"
+            }
+          ]
+        },
+        {
+          "nav": "Sploosh Kaboom",
+          "img": "sploosh-kaboom.png",
+          "image": {
+            "width": 1210,
+            "height": 960,
+            "formats": [
+              "sploosh-kaboom.png"
+            ]
+          },
+          "copy": "Game modeled after the Squid Hunt mini game in The Legend of Zelda: The Wind Waker.",
+          "ctas":[
+            {
+              "link":"https://markecurtis.com/etc/sploosh-kaboom",
+              "copy":"interactive version"
+            },
+            {
+              "link":"https://github.com/Merk42/sploosh-kaboom",
               "copy":"github"
             }
           ]
