@@ -1,7 +1,7 @@
 <figure>
   @if (EX().image) {
     <img
-    [src]="'/examples/' + EX().image!.formats[0]"
+    [ngSrc]="'/examples/' + EX().image!.formats[0]"
     [width]="EX().image!.width"
     [height]="EX().image!.height"/>
   }
