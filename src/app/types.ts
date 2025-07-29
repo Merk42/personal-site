@@ -6,14 +6,13 @@ export interface Example {
         width:number;
         height:number;
         formats:Array<string>;
-        copy:string
     },
-    ctas?:[{
+    ctas?:{
         link:string;
         copy:string;
-    }]
+    }[]
 }
-  
+
 export interface Page {
     id:string;
     link:string;

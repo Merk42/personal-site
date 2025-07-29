@@ -6,12 +6,13 @@ import { About } from '../about/about';
 import { Content } from '../content';
 import { IntersectionObserverDirective } from '../intersection-observer';
 import { IntersectionStatus } from '../from-intersection-observer';
+import { ExampleFigure } from "../example-figure/example-figure";
 
 @Component({
   selector: 'app-page',
   templateUrl: './page.html',
   styleUrls: ['./page.css'],
-  imports: [About, RouterLink, IntersectionObserverDirective],
+  imports: [About, RouterLink, IntersectionObserverDirective, ExampleFigure],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Page {

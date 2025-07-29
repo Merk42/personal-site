@@ -18,23 +18,8 @@
                 <app-about />
             }
             @default {
-              @if (EX.image) {
-                <img
-                  [src]="'/examples/' + EX.image.formats[0]"
-                  [width]="EX.image.width"
-                  [height]="EX.image.height"/>
-                }
+              <app-example-figure [EX]="EX"/>
             }
-          }
-          <p>{{EX.copy}}</p>
-          @if (EX.ctas && EX.ctas.length) {
-            <ul class="example-links">
-              @for (link of EX.ctas; track link.link) {
-                <li>
-                  <a [href]="link.link" target="_blank">{{link.copy}}</a>
-                </li>
-              }
-            </ul>
           }
         </div>
       </section>

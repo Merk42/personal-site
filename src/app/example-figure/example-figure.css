@@ -1,0 +1,25 @@
+figure {
+  margin:0
+}
+
+img {
+  height:auto;
+  max-width: 100%;
+
+
+  min-width: 0;
+  flex-shrink: 1;
+  min-height: 0;
+  object-fit: scale-down;
+  object-position: left;
+}
+
+
+.example-links a {
+  color:var(--copy);
+  font-weight: bold;
+}
+
+.example-links li+li {
+  margin-top: .75rem;
+}
