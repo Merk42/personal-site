@@ -1,5 +1,8 @@
 figure {
-  margin:0
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100dvh - 9rem);
 }
 
 img {
@@ -11,7 +14,7 @@ img {
   flex-shrink: 1;
   min-height: 0;
   object-fit: scale-down;
-  object-position: left;
+  object-position: left top;
 }
 
 
