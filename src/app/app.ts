@@ -4,7 +4,7 @@ import { Content } from './content';
 import { Logo } from './logo/logo';
 
 @Component({
-  selector: 'app-root',
+  selector: 'mec-root',
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
   imports: [Logo, RouterLink, RouterOutlet]

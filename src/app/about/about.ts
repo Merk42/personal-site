@@ -1,14 +1,14 @@
 import { Component, effect, inject } from '@angular/core';
 import { Content } from '../content';
 @Component({
-    selector: 'app-about',
+    selector: 'mec-about',
     templateUrl: './about.html',
     styleUrls: ['./about.css']
 })
 export class About {
     contentService = inject(Content);
     constructor() {
-    effect(() => {   
+    effect(() => {
       this.contentService.currentPageName.set('');
     })
   }
