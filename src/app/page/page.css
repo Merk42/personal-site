@@ -32,17 +32,17 @@ section div {
   height: calc(100vh - var(--navheight) - 1rem - 1rem);
 }
 main section:nth-child(even) {
-  background-color: light-dark(#DDD, #333)
+  background-color: var(--primary-90);
 }
 main section:nth-child(odd) {
-  background-color: light-dark(#BBB, #444);
+  background-color: var(--primary-80);
 }
 .sideNav {
   position:fixed;
 }
 .sideNav a {
   display: block;
-  border-left:5px solid black;
+  border-left:5px solid var(--copy);
   padding:5px 5px 5px 10px;
   color:var(--copy);
 }

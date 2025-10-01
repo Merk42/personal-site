@@ -1,8 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-        --navheight:50px;
+    --navheight:50px;
     color-scheme: light;
     --theme: ☀️;
+    --hue: 150deg;
+    --primary: oklch(50% 0.0 var(--hue));
+    --primary-base: 0.05;
+    --primary-10: oklch(from var(--primary) 10% calc(var(--primary-base) + (sin(1.0 * pi) * c)) h);
+    --primary-20: oklch(from var(--primary) 20% calc(var(--primary-base) + (sin(0.9 * pi) * c)) h);
+    --primary-30: oklch(from var(--primary) 30% calc(var(--primary-base) + (sin(0.8 * pi) * c)) h);
+    --primary-40: oklch(from var(--primary) 40% calc(var(--primary-base) + (sin(0.7 * pi) * c)) h);
+    --primary-50: oklch(from var(--primary) 50% calc(var(--primary-base) + (sin(0.6 * pi) * c)) h);
+    --primary-60: oklch(from var(--primary) 60% calc(var(--primary-base) + (sin(0.5 * pi) * c)) h);
+    --primary-70: oklch(from var(--primary) 70% calc(var(--primary-base) + (sin(0.4 * pi) * c)) h);
+    --primary-80: oklch(from var(--primary) 80% calc(var(--primary-base) + (sin(0.3 * pi) * c)) h);
+    --primary-90: oklch(from var(--primary) 90% calc(var(--primary-base) + (sin(0.2 * pi) * c)) h);
+    --primary-100: oklch(from var(--primary) 100% calc(var(--primary-base) + (sin(0.1 * pi) * c)) h);
 
 }
 @media (prefers-color-scheme: dark) {
@@ -34,16 +47,23 @@ html {
 
 body {
      color-scheme: light;
-    --copy:#000;
-    --menu:#EEE;
-    --bg:#FFF;
+    --copy:var(--primary-20);
+    --menu:#var(--primary-80);
+    --bg:var(--primary-100);
     --icons: url('https://www.markecurtis.com/images/icons-new.svg');
     @container style(--theme: 🌑 ) {
          color-scheme: dark;
-        --copy:#FFF;
-        --menu:#444;
-        --bg:#222;
         --icons: url('https://www.markecurtis.com/images/icons-white.svg');
+            --primary-100: oklch(from var(--primary) 10% calc(var(--primary-base) + (sin(1.0 * pi) * c)) h);
+    --primary-90: oklch(from var(--primary) 20% calc(var(--primary-base) + (sin(0.9 * pi) * c)) h);
+    --primary-80: oklch(from var(--primary) 30% calc(var(--primary-base) + (sin(0.8 * pi) * c)) h);
+    --primary-70: oklch(from var(--primary) 40% calc(var(--primary-base) + (sin(0.7 * pi) * c)) h);
+    --primary-60: oklch(from var(--primary) 50% calc(var(--primary-base) + (sin(0.6 * pi) * c)) h);
+    --primary-50: oklch(from var(--primary) 60% calc(var(--primary-base) + (sin(0.5 * pi) * c)) h);
+    --primary-40: oklch(from var(--primary) 70% calc(var(--primary-base) + (sin(0.4 * pi) * c)) h);
+    --primary-30: oklch(from var(--primary) 80% calc(var(--primary-base) + (sin(0.3 * pi) * c)) h);
+    --primary-20: oklch(from var(--primary) 90% calc(var(--primary-base) + (sin(0.2 * pi) * c)) h);
+    --primary-10: oklch(from var(--primary) 100% calc(var(--primary-base) + (sin(0.1 * pi) * c)) h);
     }
 }
 

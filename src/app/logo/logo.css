@@ -8,28 +8,22 @@
     display: inline-grid;
     grid-template-columns: repeat(10, var(--_cellsize));
     grid-template-rows: repeat(10, var(--_cellsize));
-
-    background-color: black;
-    background-color: light-dark(#000, #FFF)
+    background-color: var(--primary-20);
 }
 .xs{
-    background-color: #FFF;
-    background-color: light-dark(#FFF, #000)
+    background-color: var(--primary-100);
 }
 .sm{
-    background-color: #bfbfbf;
-    background-color: light-dark(#bfbfbf, #3e3e3e)
+    background-color: var(--primary-80);
 }
 .md{
-    background-color: #7f7f7f;
+    background-color: var(--primary-60);
 }
 .lg{
-    background-color: #3e3e3e;
-    background-color: light-dark(#3e3e3e, #bfbfbf)
+  background-color: var(--primary-40);
 }
 .xl{
-    background-color: black;
-    background-color: light-dark(#000, #FFF)
+  background-color: var(--primary-20);
 }
 
 .m .xs{
