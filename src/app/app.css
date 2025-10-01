@@ -47,63 +47,40 @@ nav, nav a{
 }
 #logo{
     width: auto;
-} 
+}
 .topNav a:not(:nth-child(1)){
-    background-repeat:no-repeat;
-    background-position:left;
     white-space: nowrap;
     height:50px;
     line-height:50px;
     flex-grow: 1;
     padding: 0 1em;
-    background-image: var(--icons);
 }
 .topNav span{
     margin-left:calc(50px - 1em);
 }
-#about{    
-    background-position:0 0;
+
+.topNav a {
+  display: flex;
 }
-#past{    
-    background-position:0 -50px;
-}
-#ug{    
-    background-position:0 -100px;
-}
-#pwa,
-#other{    
-    background-position:0 -150px;
-}
-#libraries{    
-    background-position:0 -200px;
+@media only screen and (min-width: 47.5em) and (max-width: 69em) {
+  .topNav mec-icon {
+    display:none;
+  }
 }
 
 
-@media only screen and (min-width: 47.5em) and (max-width: 60em) {
-    .topNav a,
-    .svg .topNav a{
-        background:none!important;
-    }
-    .topNav span{
-        margin-left:0;
-    }	
-}
-    
-    
-    
 .topNav a:has(~ .active){
     border-bottom:5px solid var(--copy);
 }
 .topNav .active{
     border-bottom:10px solid var(--copy);
-    
+
 }
 
 @media only screen and (max-width:47.5em){
     .topNav span{
         display: none;
     }
-    
 }
 
 .color-picker {

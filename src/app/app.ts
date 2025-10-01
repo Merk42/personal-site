@@ -2,12 +2,13 @@ import { Component, computed, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Content } from './content';
 import { Logo } from './logo/logo';
+import { Icon } from "./icon/icon";
 
 @Component({
   selector: 'mec-root',
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
-  imports: [Logo, RouterLink, RouterOutlet]
+  imports: [Logo, RouterLink, RouterOutlet, Icon]
 })
 export class App {
   private contentService = inject(Content);

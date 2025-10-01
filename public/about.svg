@@ -1,0 +1,32 @@
+<svg
+   width="50"
+   height="50"
+   viewBox="0 0 13.229166 13.229167"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
+   sodipodi:docname="about.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       id="path3958"
+       style="color:var(--copy);display:inline;overflow:visible;visibility:visible;fill:none;stroke:var(--copy);stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       cx="6.5304341"
+       cy="5.2462339"
+       rx="2.8486392"
+       ry="2.849359" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3960"
+       d="M 4.1910428,8.7631571 2.9783365,10.863542 H 10.083656 L 8.8709502,8.7631571 Z"
+       style="color:var(--copy);display:inline;overflow:visible;visibility:visible;fill:none;stroke:var(--copy);stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+  </g>
+</svg>

@@ -13,6 +13,7 @@
           [routerLink]="nav.link"
           [id]="nav.id"
           [class.active]="i === currentIndex()">
+          <mec-icon [name]="nav.id"/>
           <span aria-hidden="true">{{nav.name}}</span>
         </a>
       }
