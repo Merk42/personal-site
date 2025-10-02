@@ -39,6 +39,7 @@ nav, nav a{
 }
 .topNav{
     display: flex;
+    gap:.5em;
 }
 .topNav, #logo{
     height:50px;
@@ -53,7 +54,6 @@ nav, nav a{
     height:50px;
     line-height:50px;
     flex-grow: 1;
-    padding: 0 1em;
 }
 .topNav span{
     margin-left:calc(50px - 1em);
