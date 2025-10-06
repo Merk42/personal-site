@@ -39,7 +39,6 @@ nav, nav a{
 }
 .topNav{
     display: flex;
-    gap:.5em;
 }
 .topNav, #logo{
     height:50px;
