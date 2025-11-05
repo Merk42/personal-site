@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, resource, signal } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { Page } from './types';
 import { shareReplay } from 'rxjs';
 
@@ -15,16 +14,11 @@ export class Content {
   currentExampleIndex = signal(0);
 
  allContent = resource({
-    loader: () => {
-      return fetch('content.json').then(
-        (res) => res.json() as Promise<Array<Page>>
-      );
+    loader: async () => {
+      const res = await fetch('content.json');
+     return await (res.json() as Promise<Array<Page>>);
     },
   });
-
-
-  // allContent = toSignal(this.getContent())
-
 
   getContent() {
     return this.http.get<Array<Page>>('content.json').pipe(
@@ -54,7 +48,6 @@ export class Content {
   })
 
   currentNav = computed<{nav:string,copy:string}[]>(() => {
-    // TOOD clean this up to return array of nav / copy
     return this.currentPage().examples.map(example => {
       return {
         nav: example.nav,
@@ -62,5 +55,5 @@ export class Content {
       }
     })
   })
-  
+
 }
