@@ -1,48 +1,76 @@
-import { ElementRef } from '@angular/core';
+import { Component, provideZonelessChangeDetection } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { IntersectionObserverDirective } from './intersection-observer';
-import { IntersectionStatus } from './from-intersection-observer';
 
 describe('IntersectionObserverDirective', () => {
-  let directive: IntersectionObserverDirective;
-  let mockElementRef: ElementRef;
-  let mockElement: HTMLElement;
-
-  beforeEach(() => {
-    mockElement = document.createElement('div');
-    mockElementRef = new ElementRef(mockElement);
-    
-    TestBed.configureTestingModule({
-      providers: [IntersectionObserverDirective]
-    });
-    
-    directive = new IntersectionObserverDirective(mockElementRef);
-  });
-
   it('should create an instance', () => {
-    expect(directive).toBeTruthy();
+    @Component({
+      template: `<div intersectionObserver></div>`,
+      standalone: true,
+      imports: [IntersectionObserverDirective]
+    })
+    class TestComponent {}
+
+    TestBed.configureTestingModule({
+      imports: [TestComponent],
+      providers: [provideZonelessChangeDetection()]
+    });
+
+    const fixture = TestBed.createComponent(TestComponent);
+    expect(fixture).toBeTruthy();
   });
 
   it('should have default values', () => {
-    expect(directive.intersectionDebounce).toBe(0);
-    expect(directive.intersectionRootMargin).toBe('0px');
-    expect(directive.intersectionRoot).toBeUndefined();
-    expect(directive.intersectionThreshold).toBeUndefined();
-  });
+    @Component({
+      template: `<div intersectionObserver></div>`,
+      standalone: true,
+      imports: [IntersectionObserverDirective]
+    })
+    class TestComponent {}
 
-  it('should clean up on destroy', () => {
-    spyOn(directive['destroy$'], 'next');
-    directive.ngOnDestroy();
-    expect(directive['destroy$'].next).toHaveBeenCalledWith(null);
+    TestBed.configureTestingModule({
+      imports: [TestComponent],
+      providers: [provideZonelessChangeDetection()]
+    });
+
+    const fixture = TestBed.createComponent(TestComponent);
+    fixture.detectChanges();
+
+    const directive = fixture.debugElement.children[0].injector.get(IntersectionObserverDirective);
+
+    expect(directive.intersectionDebounce()).toBe(0);
+    expect(directive.intersectionRootMargin()).toBe('0px');
+    expect(directive.intersectionRoot()).toBeUndefined();
+    expect(directive.intersectionThreshold()).toBeUndefined();
   });
 
   it('should accept custom configuration', () => {
-    directive.intersectionDebounce = 100;
-    directive.intersectionRootMargin = '10px';
-    directive.intersectionThreshold = 0.5;
+    @Component({
+      template: `
+        <div
+          intersectionObserver
+          [intersectionDebounce]="100"
+          [intersectionRootMargin]="'10px'"
+          [intersectionThreshold]="0.5">
+        </div>
+      `,
+      standalone: true,
+      imports: [IntersectionObserverDirective]
+    })
+    class TestComponent {}
 
-    expect(directive.intersectionDebounce).toBe(100);
-    expect(directive.intersectionRootMargin).toBe('10px');
-    expect(directive.intersectionThreshold).toBe(0.5);
+    TestBed.configureTestingModule({
+      imports: [TestComponent],
+      providers: [provideZonelessChangeDetection()]
+    });
+
+    const fixture = TestBed.createComponent(TestComponent);
+    fixture.detectChanges();
+
+    const directive = fixture.debugElement.children[0].injector.get(IntersectionObserverDirective);
+
+    expect(directive.intersectionDebounce()).toBe(100);
+    expect(directive.intersectionRootMargin()).toBe('10px');
+    expect(directive.intersectionThreshold()).toBe(0.5);
   });
 });
