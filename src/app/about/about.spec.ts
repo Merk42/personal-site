@@ -1,5 +1,6 @@
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideRouter } from '@angular/router';
 import { DebugElement, provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -16,7 +17,8 @@ describe('About', () => {
       providers: [
         provideHttpClient(),
         provideHttpClientTesting(),
-        provideZonelessChangeDetection()]
+        provideZonelessChangeDetection(),
+        provideRouter([]) ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(About);
@@ -32,7 +34,7 @@ describe('About', () => {
   it('should render the coding history content', () => {
     const paragraphs = debugElement.queryAll(By.css('p'));
     expect(paragraphs.length).toBeGreaterThan(0);
-    
+
     const firstParagraph = paragraphs[0];
     expect(firstParagraph.nativeElement.textContent).toContain('My coding history began in High School');
   });

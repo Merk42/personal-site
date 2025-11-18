@@ -1,0 +1,74 @@
+#resume {
+  max-width: 62.5em;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+}
+
+header {
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  border-bottom:4px solid var(--primary-60);
+  color: var(--primary-60);
+}
+
+h4 {
+  font-style: italic;
+  font-weight: normal;
+}
+
+dt {
+  font-weight: bold;
+  clear:left;
+  margin-right: 1em;
+}
+
+dt::after{
+  content:":"
+}
+dt, dd {
+  display: inline;
+}
+dd{
+  margin-left:0
+}
+
+dd::after {
+  content:", "
+}
+dd:has(+ dt)::after{
+  content:"";
+  display:block;
+  height:.5em
+}
+dd:last-child::after{
+  display: none;
+}
+
+li+li {
+  margin-top:.5rem;
+}
+.education,
+section header {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:1em
+}
+
+section header h3,
+section header p {
+  margin:0;
+  font-weight: bold;
+}
+@media only screen and (max-width:47.5em){
+  .education,
+section header {
+  display: block;
+}
+}
