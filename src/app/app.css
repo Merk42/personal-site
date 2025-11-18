@@ -77,7 +77,10 @@ nav, nav a{
 }
 
 @media only screen and (max-width:47.5em){
-    .topNav span{
-        display: none;
-    }
+  .topNav span{
+    display: none;
+  }
+  .topNav a {
+    justify-content: center;
+  }
 }
