@@ -1,11 +1,11 @@
 <form class="color-picker">
   <fieldset>
     <label for="hue">Hue</label>
-    <input id="hue" type="range" min="0" max="360" [(ngModel)]="hue" [ngModelOptions]="{standalone: true}"/>
+    <input id="hue" type="range" [field]="themeForm.hue"/>
   </fieldset>
   <fieldset>
     <label for="theme">Theme</label>
-    <select name="theme" id="theme">
+    <select id="theme" [field]="themeForm.mode">
       <option value="💻">System</option>
       <option value="☀️">Light</option>
       <option value="🌑">Dark</option>

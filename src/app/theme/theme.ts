@@ -1,18 +1,36 @@
-import { Component, effect, inject, model} from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, effect, inject, signal} from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { Field, form, required, max, min} from '@angular/forms/signals';
+
+interface ThemeData {
+  hue: number;
+  mode: '💻'|'☀️'|'🌑';
+}
+
 @Component({
   selector: 'mec-theme',
-  imports: [FormsModule],
+  imports: [Field],
   templateUrl: './theme.html',
   styleUrl: './theme.css'
 })
 export class Theme {
-  hue = model(150);
+
+  themeModel = signal<ThemeData>({
+    hue: 150,
+    mode: '💻',
+  });
+
+  themeForm = form(this.themeModel, (schemaPath) => {
+    required(schemaPath.hue);
+    required(schemaPath.mode);
+    max(schemaPath.hue, 360);
+    min(schemaPath.hue, 0);
+  });
+
   meta = inject(Meta);
   constructor() {
     effect(() => {
-      const DEG = this.hue() +'deg';
+      const DEG = this.themeForm.hue().value() +'deg';
       document.documentElement.style.setProperty('--hue', DEG);
       const BASE = .05;
       const C = 0;
