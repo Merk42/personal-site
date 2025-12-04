@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnInit, OnDestroy, input, output } from '@angular/core';
+import { Directive, ElementRef, OnInit, OnDestroy, input, output, inject } from '@angular/core';
 
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -9,6 +9,8 @@ import {fromIntersectionObserver, IntersectionStatus} from './from-intersection-
   selector: '[intersectionObserver]'
 })
 export class IntersectionObserverDirective implements OnInit, OnDestroy {
+  private element = inject(ElementRef);
+
   readonly intersectionDebounce = input(0);
   readonly intersectionRootMargin = input('0px');
   readonly intersectionRoot = input<HTMLElement>();
@@ -18,7 +20,10 @@ export class IntersectionObserverDirective implements OnInit, OnDestroy {
 
   private destroy$ = new Subject();
 
-  constructor(private element: ElementRef) {}
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {}
 
   ngOnInit() {
     const element = this.element.nativeElement;
