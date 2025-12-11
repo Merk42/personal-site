@@ -21,7 +21,7 @@
           },
           "copy": "At first CSS only, eventually evolving into an Angular and Vue component library. Standard UI paradigms to be used across products. Using these supported UX components reduced both Creative and Developer time",
           "ctas": [{
-            "link":"http://www.markecurtis.com/vue-component-library/",
+            "link":"https://www.markecurtis.com/vue-component-library/",
             "copy":"see the interactive Vue version"
           }]
         },
@@ -230,7 +230,7 @@
           },
           "copy": "Component Library built in Angular, utilized in the user-facing website of Uncommon Goods.",
           "ctas": [{
-            "link":"http://www.uncommongoods.com/component-library",
+            "link":"https://www.uncommongoods.com/component-library",
             "copy":"see the interactive Angular version"
           }]
         },
@@ -246,10 +246,11 @@
           },
           "copy": "Component Library built in Vue, utilized in the internal tools of Uncommon Goods.",
           "ctas": [{
-            "link":"http://www.markecurtis.com/vue-component-library/index.html",
+            "link":"https://www.markecurtis.com/vue-component-library/index.html",
             "copy":"see the interactive Vue version"
           }]
-        },        {
+        },
+        {
           "nav": "React",
           "img": "react-component-library.png",
           "image": {
@@ -261,8 +262,24 @@
           },
           "copy": "Component Library built in React, as a demonstration of abilities in React",
           "ctas": [{
-            "link":"http://www.markecurtis.com/react-component-library/index.html",
+            "link":"https://www.markecurtis.com/component-library/react/index.html",
             "copy":"see the interactive React version"
+          }]
+        },
+        {
+          "nav": "Angular+Tailwind",
+          "img": "angular-tailwind-component-library.png",
+          "image": {
+            "width": 1000,
+            "height": 800,
+            "formats": [
+              "angular-tailwind-component-library.png"
+            ]
+          },
+          "copy": "Component Library using Tailwind and bleeding edge Signal Forms in Angular",
+          "ctas": [{
+            "link":"https://www.markecurtis.com/component-library/angular-tailwind/index.html",
+            "copy":"see the interactive Angular+Tailwind version"
           }]
         }
       ]
