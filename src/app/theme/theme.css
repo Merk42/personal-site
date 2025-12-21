@@ -17,3 +17,9 @@
 select{
   width: 100%;
 }
+
+label[for='theme'],
+#theme{
+  display: var(--selector);
+}
+

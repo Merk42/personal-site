@@ -51,6 +51,7 @@ body {
     --menu:#var(--primary-80);
     --bg:var(--primary-100);
     --icons: url('https://www.markecurtis.com/images/icons-new.svg');
+    --selector:none;
     @container style(--theme: 🌑 ) {
          color-scheme: dark;
         --icons: url('https://www.markecurtis.com/images/icons-white.svg');
@@ -64,7 +65,12 @@ body {
     --primary-30: oklch(from var(--primary) 80% calc(var(--primary-base) + (sin(0.3 * pi) * c)) h);
     --primary-20: oklch(from var(--primary) 90% calc(var(--primary-base) + (sin(0.2 * pi) * c)) h);
     --primary-10: oklch(from var(--primary) 100% calc(var(--primary-base) + (sin(0.1 * pi) * c)) h);
+    --selector:block;
     }
+    @container style(--theme: ☀️) {
+      --selector:block;
+    }
+
 }
 
 body{
