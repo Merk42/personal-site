@@ -16,7 +16,7 @@ interface ThemeData {
 export class Theme {
 
   themeModel = signal<ThemeData>({
-    hue: 150,
+    hue: new Date().getHours() * 15,
     mode: '💻',
   });
 
