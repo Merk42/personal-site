@@ -20,6 +20,11 @@ export class Content {
     },
   });
 
+  async contentSections():Promise<Array<Page>> {
+    const res = await fetch('content.json');
+    return await res.json()
+  }
+
   getContent() {
     return this.http.get<Array<Page>>('content.json').pipe(
       shareReplay(1)
