@@ -8,7 +8,7 @@ export const serverRoutes: ServerRoute[] = [
     async getPrerenderParams() {
       const contentService = inject(Content);
       const content = await contentService.contentSections();
-      const sections:string[] = content.map(section => section.id);
+      const sections:string[] = content.map(section => section.link.slice(1));
       return sections.map((section) => ({section}));
     },
   },
