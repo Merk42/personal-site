@@ -48,7 +48,7 @@ html {
 body {
      color-scheme: light;
     --copy:var(--primary-20);
-    --menu:#var(--primary-80);
+    --menu:var(--primary-80);
     --bg:var(--primary-100);
     --icons: url('https://www.markecurtis.com/images/icons-new.svg');
     --selector:none;
