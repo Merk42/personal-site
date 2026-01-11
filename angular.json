@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "personal-vitest:build:production"
+              "buildTarget": "personal-site:build:production"
             },
             "development": {
-              "buildTarget": "personal-vitest:build:development"
+              "buildTarget": "personal-site:build:development"
             }
           },
           "defaultConfiguration": "development"
