@@ -2,20 +2,27 @@
     position:fixed;
     bottom:0;
     left:0;
+    /*
     background-color: var(--primary-100);
+    */
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:.5rem;
+    padding: .25rem;
+    width: calc(20ch - .5rem);
 }
 .color-picker fieldset {
-    display: flex;
-    gap: .5rem;
+    display:contents;
     padding: .25rem;
     width: 20CH;
     box-sizing: border-box;
-    background-color: var(--menu);
     margin: 0;
     border: none;
 }
+input,
 select{
   width: 100%;
+  min-width:0;
 }
 
 label[for='theme'],
@@ -23,3 +30,16 @@ label[for='theme'],
   display: var(--selector);
 }
 
+@media screen and (max-width:30em) {
+  .color-picker {
+    right:0;
+    grid-template-columns:1fr 1fr;
+    width:auto;
+  }
+  .color-picker fieldset {
+    display:grid;
+    grid-template-columns:auto 1fr;
+    width:100%;
+    gap: .25rem;
+  }
+}
