@@ -1,4 +1,5 @@
-import { Component, effect, inject, signal} from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID, effect, inject, signal} from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { FormField, form, required, max, min} from '@angular/forms/signals';
 
@@ -28,16 +29,18 @@ export class Theme {
   });
 
   meta = inject(Meta);
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     effect(() => {
       const DEG = this.themeForm.hue().value() +'deg';
-      document.documentElement.style.setProperty('--hue', DEG);
-      const BASE = .05;
-      const C = 0;
-      const pi = 3.14;
-      const CALC = BASE + (Math.sin(0.6 * pi) * C);
-      const THEMECOLOR = `oklch(50% ${CALC} ${DEG})`
-      this.meta.updateTag({ content: THEMECOLOR }, 'name=theme-color');
+      if (isPlatformBrowser(this.platformId)) {
+        document.documentElement.style.setProperty('--hue', DEG);
+        const BASE = .05;
+        const C = 0;
+        const pi = 3.14;
+        const CALC = BASE + (Math.sin(0.6 * pi) * C);
+        const THEMECOLOR = `oklch(50% ${CALC} ${DEG})`
+        this.meta.updateTag({ content: THEMECOLOR }, 'name=theme-color');
+      }
     })
   }
 
