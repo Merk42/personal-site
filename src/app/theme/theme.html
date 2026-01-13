@@ -1,11 +1,11 @@
 <form class="color-picker">
   <fieldset>
     <label for="hue">Hue</label>
-    <input id="hue" type="range" [field]="themeForm.hue"/>
+    <input id="hue" type="range" [formField]="themeForm.hue"/>
   </fieldset>
   <fieldset>
     <label for="theme">Theme</label>
-    <select id="theme" [field]="themeForm.mode">
+    <select id="theme" [formField]="themeForm.mode">
       <option value="💻">System</option>
       <option value="☀️">Light</option>
       <option value="🌑">Dark</option>

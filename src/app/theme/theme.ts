@@ -1,6 +1,6 @@
 import { Component, effect, inject, signal} from '@angular/core';
 import { Meta } from '@angular/platform-browser';
-import { Field, form, required, max, min} from '@angular/forms/signals';
+import { FormField, form, required, max, min} from '@angular/forms/signals';
 
 interface ThemeData {
   hue: number;
@@ -9,7 +9,7 @@ interface ThemeData {
 
 @Component({
   selector: 'mec-theme',
-  imports: [Field],
+  imports: [FormField],
   templateUrl: './theme.html',
   styleUrl: './theme.css'
 })
