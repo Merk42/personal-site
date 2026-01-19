@@ -1,7 +1,4 @@
 .color-picker {
-    position:fixed;
-    bottom:0;
-    left:0;
     /*
     background-color: var(--primary-100);
     */
@@ -9,7 +6,6 @@
     grid-template-columns:auto 1fr;
     gap:.5rem;
     padding: .25rem;
-    width: calc(20ch - .5rem);
 }
 .color-picker fieldset {
     display:contents;
@@ -32,7 +28,6 @@ label[for='theme'],
 
 @media screen and (max-width:30em) {
   .color-picker {
-    right:0;
     grid-template-columns:1fr 1fr;
     width:auto;
   }

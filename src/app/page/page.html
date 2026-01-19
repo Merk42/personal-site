@@ -1,27 +1,28 @@
 <aside>
-    <nav class="sideNav">
+  <nav class="sideNav">
       @for (work of contentService.currentNav(); let i = $index; track work.nav) {
         <a  routerLink="./" [fragment]="work.nav" [class.active]="$index === contentService.currentExampleIndex()">
             <span>{{work.nav}}</span>
         </a>
     }
   </nav>
-  </aside>
-  <main>
-    @for (EX of demo().examples; track EX.nav;let idx = $index) {
-      <section
-        [id]="EX.nav">
-        <div class="pageContent">
-          <h2  intersectionObserver [intersectionDebounce]="0" (visibilityChange)="onVisibilityChanged($index, $event)">{{EX.nav}}</h2>
-          @switch (EX.nav) {
-            @case ('About Me') {
-                <mec-about />
-            }
-            @default {
-              <mec-example-figure [EX]="EX"/>
-            }
+</aside>
+<main>
+  @for (EX of demo().examples; track EX.nav;let idx = $index) {
+    <section
+      [id]="EX.nav">
+      <div class="pageContent">
+        <h2 intersectionObserver [intersectionDebounce]="0" (visibilityChange)="onVisibilityChanged($index, $event)">{{EX.nav}}</h2>
+        @switch (EX.nav) {
+          @case ('About Me') {
+              <mec-about />
           }
-        </div>
-      </section>
-    }
-  </main>
+          @default {
+            <mec-example-figure [EX]="EX"/>
+          }
+        }
+      </div>
+    </section>
+  }
+</main>
+<mec-theme/>

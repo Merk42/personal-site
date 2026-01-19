@@ -1,21 +1,13 @@
 :host {
-    display: grid;
-    grid-template-columns: 20ch auto;
+  display: grid;
+  grid-template-columns: 20ch auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "sidebar main"
+    "footer main";
 }
-
-html {
-    --navheight:50px
-}
-body, html {
-scroll-snap-type: proximity;
-scroll-snap-type: y mandatory;
-}
-
-header {
-position:sticky;
-top:0;
-height:var(--navheight);
-background-color: white;
+main {
+  grid-area: main;
 }
 
 main section {
@@ -49,9 +41,22 @@ main section:nth-child(odd) {
 .sideNav a.active {
   border-left-width:10px;
 }
+aside {
+  grid-area: sidebar;
+}
+mec-theme {
+  grid-area: footer;
+
+  position: sticky;
+  bottom:0;
+  background-color: var(--bg);
+}
 @media screen and (max-width:30em) {
   :host{
-    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sidebar main"
+      "footer footer";
+    grid-template-columns: 30px 1fr;
   }
   .sideNav a {
     border-left-width:10px;
