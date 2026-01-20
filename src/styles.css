@@ -66,11 +66,11 @@ body {
     --primary-30: oklch(from var(--primary) 80% calc(var(--primary-base) + (sin(0.3 * pi) * c)) h);
     --primary-20: oklch(from var(--primary) 90% calc(var(--primary-base) + (sin(0.2 * pi) * c)) h);
     --primary-10: oklch(from var(--primary) 100% calc(var(--primary-base) + (sin(0.1 * pi) * c)) h);
-    --selector:block;
+    --selector:contents;
     --repeat:2;
   }
   @container style(--theme: ☀️) {
-    --selector:block;
+    --selector:contents;
     --repeat:2;
   }
 }
