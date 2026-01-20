@@ -46,16 +46,17 @@ html {
 }
 
 body {
-     color-scheme: light;
-    --copy:var(--primary-20);
-    --menu:var(--primary-80);
-    --bg:var(--primary-100);
-    --icons: url('https://www.markecurtis.com/images/icons-new.svg');
-    --selector:none;
-    @container style(--theme: 🌑 ) {
-         color-scheme: dark;
-        --icons: url('https://www.markecurtis.com/images/icons-white.svg');
-            --primary-100: oklch(from var(--primary) 10% calc(var(--primary-base) + (sin(1.0 * pi) * c)) h);
+  color-scheme: light;
+  --copy:var(--primary-20);
+  --menu:var(--primary-80);
+  --bg:var(--primary-100);
+  --icons: url('https://www.markecurtis.com/images/icons-new.svg');
+  --selector:none;
+  --repeat:1;
+  @container style(--theme: 🌑 ) {
+    color-scheme: dark;
+    --icons: url('https://www.markecurtis.com/images/icons-white.svg');
+    --primary-100: oklch(from var(--primary) 10% calc(var(--primary-base) + (sin(1.0 * pi) * c)) h);
     --primary-90: oklch(from var(--primary) 20% calc(var(--primary-base) + (sin(0.9 * pi) * c)) h);
     --primary-80: oklch(from var(--primary) 30% calc(var(--primary-base) + (sin(0.8 * pi) * c)) h);
     --primary-70: oklch(from var(--primary) 40% calc(var(--primary-base) + (sin(0.7 * pi) * c)) h);
@@ -66,11 +67,12 @@ body {
     --primary-20: oklch(from var(--primary) 90% calc(var(--primary-base) + (sin(0.2 * pi) * c)) h);
     --primary-10: oklch(from var(--primary) 100% calc(var(--primary-base) + (sin(0.1 * pi) * c)) h);
     --selector:block;
-    }
-    @container style(--theme: ☀️) {
-      --selector:block;
-    }
-
+    --repeat:2;
+  }
+  @container style(--theme: ☀️) {
+    --selector:block;
+    --repeat:2;
+  }
 }
 
 body{

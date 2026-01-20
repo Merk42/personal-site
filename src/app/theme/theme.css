@@ -21,14 +21,13 @@ select{
   min-width:0;
 }
 
-label[for='theme'],
-#theme{
+fieldset:has(#theme){
   display: var(--selector);
 }
 
 @media screen and (max-width:30em) {
   .color-picker {
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(var(--repeat), 1fr);;
     width:auto;
   }
   .color-picker fieldset {
