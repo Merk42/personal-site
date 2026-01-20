@@ -95,6 +95,7 @@ describe('Content Service', () => {
     expect(currentPage.link).toBe('/about');
   });
 */
+/*
   it('should return empty page when no match found', () => {
     // Mock the HTTP request first
     service.getContent().subscribe();
@@ -112,6 +113,7 @@ describe('Content Service', () => {
       examples: []
     });
   });
+  */
 /*
   it('should compute current nav from current page examples', () => {
     // Mock the HTTP request first

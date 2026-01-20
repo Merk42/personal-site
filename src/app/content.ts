@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, resource, signal } from '@angular/core';
 import { Page } from './types';
@@ -15,18 +16,18 @@ export class Content {
 
  allContent = resource({
     loader: async () => {
-      const res = await fetch('content.json');
+      const res = await fetch(`${environment.baseUrl}content.json`);
      return await (res.json() as Promise<Array<Page>>);
     },
   });
 
   async contentSections():Promise<Array<Page>> {
-    const res = await fetch('content.json');
+    const res = await fetch(`${environment.baseUrl}content.json`);
     return await res.json()
   }
 
   getContent() {
-    return this.http.get<Array<Page>>('content.json').pipe(
+    return this.http.get<Array<Page>>(`${environment.baseUrl}content.json`).pipe(
       shareReplay(1)
     );
   }
