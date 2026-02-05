@@ -84,3 +84,36 @@ nav, nav a{
     justify-content: center;
   }
 }
+
+
+@supports (position-anchor: --any-name) {
+  .topNav a{
+      border-color:transparent!important;
+  }
+  .topNav a.active {
+    anchor-name: --active-top;
+  }
+  .topNav::before,
+  .topNav::after{
+    content:"";
+    background-color:var(--copy);
+    position: absolute;
+    position-anchor: --active-top;
+    bottom: anchor(bottom);
+  }
+  .topNav::before{
+    height:5px;
+    left: 0;
+    right: anchor(left);
+    transition: right .25s
+  }
+  .topNav::after{
+      height:10px;
+      position: absolute; /* 2. Position the element (absolute or fixed) */
+      position-anchor: --active-top; /* 3. Link to the anchor */
+      bottom: anchor(bottom);
+      left: anchor(left);
+      right: anchor(right);
+      transition: left .25s, right .25s
+  }
+}

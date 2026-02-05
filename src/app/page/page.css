@@ -76,3 +76,36 @@ mec-theme {
   display:flex;
   flex-flow: column nowrap;
 }
+
+@supports (position-anchor: --any-name) {
+  .sideNav a{
+      border-color:transparent!important;
+  }
+  .sideNav a.active {
+    anchor-name: --active-top;
+    border-left-width: 5px;
+  }
+  .sideNav::before,
+  .sideNav::after{
+    content:"";
+    background-color:var(--copy);
+    position: absolute;
+    position-anchor: --active-top;
+    bottom: anchor(bottom);
+  }
+  .sideNav::before{
+    width:5px;
+    top: 0;
+    bottom: anchor(top);
+    transition: bottom .25s
+  }
+  .sideNav::after{
+    width:10px;
+    position: absolute; /* 2. Position the element (absolute or fixed) */
+    position-anchor: --active-top; /* 3. Link to the anchor */
+    left: anchor(left);
+    top: anchor(top);
+    bottom: anchor(bottom);
+    transition: top .25s, bottom .25s
+  }
+}
