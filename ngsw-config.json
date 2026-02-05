@@ -29,6 +29,8 @@
   ],
   "navigationUrls": [
     "/**",
-    "!/pwa/**"
+    "!/pwa/**",
+    "!/etc/**",
+    "!/component-library/**"
   ]
 }
