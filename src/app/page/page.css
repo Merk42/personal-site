@@ -101,8 +101,8 @@ mec-theme {
   }
   .sideNav::after{
     width:10px;
-    position: absolute; /* 2. Position the element (absolute or fixed) */
-    position-anchor: --active-top; /* 3. Link to the anchor */
+    position: absolute;
+    position-anchor: --active-top;
     left: anchor(left);
     top: anchor(top);
     bottom: anchor(bottom);
