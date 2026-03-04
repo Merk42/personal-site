@@ -3,7 +3,8 @@
     <img
     [ngSrc]="'/examples/' + EX().image!.formats[0]"
     [width]="EX().image!.width"
-    [height]="EX().image!.height"/>
+    [height]="EX().image!.height"
+    [alt]="EX().nav"/>
   }
   <figcaption>
     <p>{{EX().copy}}</p>
