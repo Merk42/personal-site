@@ -68,7 +68,17 @@ mec-theme {
     border-left-width:20px;
   }
   .sideNav span{
-    visibility: hidden;
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    /* For modern browsers, clip-path works inwards from each corner */
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
   }
 }
 
@@ -79,7 +89,7 @@ mec-theme {
 
 @supports (position-anchor: --any-name) {
   .sideNav a{
-      border-color:transparent!important;
+    border-color:transparent!important;
   }
   .sideNav a.active {
     anchor-name: --active-top;
@@ -107,5 +117,17 @@ mec-theme {
     top: anchor(top);
     bottom: anchor(bottom);
     transition: top .25s, bottom .25s
+  }
+  @media screen and (max-width:30em) {
+    .sideNav::before{
+      display:none
+    }
+    .sideNav::after{
+      width:20px;
+      transition: none;
+    }
+    .sideNav a{
+      border-color:var(--copy)!important;
+    }
   }
 }
