@@ -25,15 +25,3 @@ fieldset:has(#theme){
   display: var(--selector);
 }
 
-@media screen and (max-width:30em) {
-  .color-picker {
-    grid-template-columns:repeat(var(--repeat), 1fr);;
-    width:auto;
-  }
-  .color-picker fieldset {
-    display:grid;
-    grid-template-columns:auto 1fr;
-    width:100%;
-    gap: .25rem;
-  }
-}
