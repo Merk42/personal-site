@@ -47,6 +47,7 @@ html {
 
 body {
   color-scheme: light;
+  accent-color: var(--primary-50);
   --copy:var(--primary-20);
   --menu:var(--primary-80);
   --bg:var(--primary-100);
