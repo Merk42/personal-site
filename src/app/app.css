@@ -48,7 +48,12 @@ nav, nav a{
 #logo{
     width: auto;
 }
-.topNav a:not(:nth-child(1)){
+.topNav a:first-child {
+  width:200px;
+  display:inline-block;
+  justify-content: start;
+}
+.topNav a:not(:first-child){
     white-space: nowrap;
     height:50px;
     line-height:50px;
@@ -82,6 +87,12 @@ nav, nav a{
   }
   .topNav a {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .topNav a:first-child {
+    width:100px;
   }
 }
 
