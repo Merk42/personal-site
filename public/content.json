@@ -246,7 +246,7 @@
           },
           "copy": "Component Library built in Vue, utilized in the internal tools of Uncommon Goods.",
           "ctas": [{
-            "link":"https://www.markecurtis.com/vue-component-library/index.html",
+            "link":"https://www.markecurtis.com/vue-component-library",
             "copy":"see the interactive Vue version"
           }]
         },
@@ -262,7 +262,7 @@
           },
           "copy": "Component Library built in React, as a demonstration of abilities in React",
           "ctas": [{
-            "link":"https://www.markecurtis.com/component-library/react/index.html",
+            "link":"https://www.markecurtis.com/component-library/react",
             "copy":"see the interactive React version"
           }]
         },
@@ -278,7 +278,7 @@
           },
           "copy": "Component Library using Tailwind and bleeding edge Signal Forms in Angular",
           "ctas": [{
-            "link":"https://www.markecurtis.com/component-library/angular-tailwind/index.html",
+            "link":"https://www.markecurtis.com/component-library/angular-tailwind",
             "copy":"see the interactive Angular+Tailwind version"
           }]
         }
@@ -328,7 +328,7 @@
           "copy": "Tool to assist in proper measurements of water and coffee when making pour over.",
           "ctas":[
             {
-              "link":"https://www.markecurtis.com/pwa/coffee-config/index.html",
+              "link":"https://www.markecurtis.com/pwa/coffee-config",
               "copy":"interactive version"
             },
             {
@@ -350,7 +350,7 @@
           "copy": "Game modeled after the Squid Hunt mini game in The Legend of Zelda: The Wind Waker.",
           "ctas":[
             {
-              "link":"https://www.markecurtis.com/etc/sploosh-kaboom/index.html",
+              "link":"https://www.markecurtis.com/pwa/sploosh-kaboom",
               "copy":"interactive version"
             },
             {
