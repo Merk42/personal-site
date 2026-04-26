@@ -12,7 +12,7 @@ import { Theme } from "../theme/theme";
 @Component({
   selector: 'mec-page',
   templateUrl: './page.html',
-  styleUrls: ['./page.css'],
+  styleUrl: './page.css',
   imports: [About, RouterLink, IntersectionObserverDirective, ExampleFigure, Theme],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

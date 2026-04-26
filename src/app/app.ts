@@ -7,7 +7,7 @@ import { Icon } from "./icon/icon";
 @Component({
   selector: 'mec-root',
   templateUrl: './app.html',
-  styleUrls: ['./app.css'],
+  styleUrl: './app.css',
   imports: [Logo, RouterLink, RouterOutlet, Icon]
 })
 export class App {

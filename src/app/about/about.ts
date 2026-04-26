@@ -5,7 +5,7 @@ import { Theme } from '../theme/theme';
 @Component({
     selector: 'mec-about',
     templateUrl: './about.html',
-    styleUrls: ['./about.css'],
+    styleUrl: './about.css',
     imports: [RouterLink, Theme]
 })
 export class About {
