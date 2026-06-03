@@ -1,4 +1,4 @@
-import { Component, effect, inject } from '@angular/core';
+import { Component, effect, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Content } from '../content';
 import { RouterLink } from '@angular/router';
 import { Theme } from '../theme/theme';
@@ -6,6 +6,7 @@ import { Theme } from '../theme/theme';
     selector: 'mec-about',
     templateUrl: './about.html',
     styleUrl: './about.css',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [RouterLink, Theme]
 })
 export class About {

@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Content } from './content';
 import { Logo } from './logo/logo';
@@ -8,6 +8,7 @@ import { Icon } from "./icon/icon";
   selector: 'mec-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Logo, RouterLink, RouterOutlet, Icon]
 })
 export class App {

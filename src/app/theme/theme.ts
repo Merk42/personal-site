@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID, effect, inject, signal} from '@angular/core';
+import { Component, Inject, PLATFORM_ID, effect, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { FormField, form, required, max, min} from '@angular/forms/signals';
 
@@ -12,6 +12,7 @@ interface ThemeData {
   selector: 'mec-theme',
   imports: [FormField],
   templateUrl: './theme.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './theme.css'
 })
 export class Theme {

@@ -4,7 +4,7 @@ import { InMemoryScrollingFeature, InMemoryScrollingOptions, provideRouter, with
 import { routes } from './app.routes';
 import { provideHttpClient, withFetch, withInterceptorsFromDi } from '@angular/common/http';
 import { provideServiceWorker } from '@angular/service-worker';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideClientHydration, withEventReplay, withNoIncrementalHydration } from '@angular/platform-browser';
 import { Update } from './update';
 const scrollConfig: InMemoryScrollingOptions = {
   scrollPositionRestoration: 'top',
@@ -23,7 +23,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch(), withInterceptorsFromDi()), provideServiceWorker('ngsw-worker.js', {
             enabled: !isDevMode(),
             registrationStrategy: 'registerWhenStable:30000'
-          }), provideClientHydration(withEventReplay()), provideServiceWorker('ngsw-worker.js', {
+          }), provideClientHydration(withEventReplay(), withNoIncrementalHydration()), provideServiceWorker('ngsw-worker.js', {
             enabled: !isDevMode(),
             registrationStrategy: 'registerWhenStable:30000'
           })
