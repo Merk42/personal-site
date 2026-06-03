@@ -1,10 +1,9 @@
-import { Component, input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'mec-icon',
   imports: [],
   templateUrl: './icon.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './icon.css'
 })
 export class Icon {

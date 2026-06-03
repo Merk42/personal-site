@@ -14,7 +14,6 @@ import { Theme } from "../theme/theme";
   templateUrl: './page.html',
   styleUrl: './page.css',
   imports: [About, RouterLink, IntersectionObserverDirective, ExampleFigure, Theme],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Page {
   viewportScroller = inject(ViewportScroller);
