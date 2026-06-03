@@ -1,15 +1,14 @@
-import { Directive, ElementRef, OnInit, OnDestroy, input, output, inject } from '@angular/core';
+import { DestroyRef, Directive, ElementRef, OnInit, input, output, inject } from '@angular/core';
 
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
-
-import {fromIntersectionObserver, IntersectionStatus} from './from-intersection-observer';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { fromIntersectionObserver, IntersectionStatus } from './from-intersection-observer';
 
 @Directive({
   selector: '[intersectionObserver]'
 })
-export class IntersectionObserverDirective implements OnInit, OnDestroy {
+export class IntersectionObserverDirective implements OnInit {
   private element = inject(ElementRef);
+  destroyRef = inject(DestroyRef);
 
   readonly intersectionDebounce = input(0);
   readonly intersectionRootMargin = input('0px');
@@ -18,12 +17,6 @@ export class IntersectionObserverDirective implements OnInit, OnDestroy {
 
   readonly visibilityChange = output<IntersectionStatus>();
 
-  private destroy$ = new Subject();
-
-  /** Inserted by Angular inject() migration for backwards compatibility */
-  constructor(...args: unknown[]);
-
-  constructor() {}
 
   ngOnInit() {
     const element = this.element.nativeElement;
@@ -38,13 +31,9 @@ export class IntersectionObserverDirective implements OnInit, OnDestroy {
       config,
       this.intersectionDebounce()
     ).pipe(
-      takeUntil(this.destroy$)
+      takeUntilDestroyed(this.destroyRef)
     ).subscribe((status) => {
       this.visibilityChange.emit(status);
     });
-  }
-
-  ngOnDestroy() {
-    this.destroy$.next(null);
   }
 }
