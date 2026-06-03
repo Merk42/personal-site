@@ -1,11 +1,9 @@
 import { environment } from '../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Injectable, computed, inject, resource, signal } from '@angular/core';
+import { computed, inject, resource, Service, signal } from '@angular/core';
 import { Page } from './types';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Service()
 export class Content {
   private http = inject(HttpClient);
 
