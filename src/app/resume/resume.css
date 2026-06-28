@@ -38,9 +38,9 @@ section header p {
   margin:0;
   font-weight: bold;
 }
-@media only screen and (max-width:47.5em){
+@media (width <= 47.5em) {
   .education,
-section header {
-  display: block;
-}
+  section header {
+    display: block;
+  }
 }

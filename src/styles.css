@@ -80,8 +80,7 @@ body{
   background-color: var(--bg);
   color:var(--copy);
 }
-
-@media screen and (max-width: 30em) {
+@media (width <= 30em) {
   html,
   body {
     scroll-snap-type: y proximity;

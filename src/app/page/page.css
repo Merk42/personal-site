@@ -51,7 +51,7 @@ mec-theme {
   bottom:0;
   background-color: var(--bg);
 }
-@media screen and (max-width:30em) {
+@media (width <= 30em) {
   :host{
     grid-template-areas:
       "sidebar main"
@@ -118,7 +118,7 @@ mec-theme {
     bottom: anchor(bottom);
     transition: top .25s, bottom .25s
   }
-  @media screen and (max-width:30em) {
+  @media (width <= 30em) {
     .sideNav::before{
       display:none
     }
